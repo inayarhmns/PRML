@@ -1,0 +1,3694 @@
+{
+ "title": "MML30 — 30-day MML learning plan",
+ "start": "2026-10-19",
+ "end": "2026-11-17",
+ "overleaf": "https://www.overleaf.com/project/6adaca2e9783ef342efceec6",
+ "weeks": [
+  {
+   "n": 1,
+   "title": "Connect math foundations, Python mechanics and regression",
+   "goal": "Be able to manipulate vectors/matrices, differentiate simple losses, trace Python control flow and explain linear regression + gradient descent."
+  },
+  {
+   "n": 2,
+   "title": "Probability/statistics, algorithmic thinking and classification",
+   "goal": "Solve Bayes/expectation/statistics problems, write code using core data structures, analyze basic time complexity and compare regression with classification."
+  },
+  {
+   "n": 3,
+   "title": "Gradients, neural networks, PCA, clustering and computer vision",
+   "goal": "Derive a gradient update, trace a neural-network forward/backward pass, explain PCA and k-means, calculate convolution output dimensions, and recognize basic CV geometry/representation concepts."
+  },
+  {
+   "n": 4,
+   "title": "Consolidation, timed practice and review",
+   "goal": "Demonstrate recall under time pressure, avoid repeat errors, and know when to move on rather than over-study one topic."
+  }
+ ],
+ "days": [
+  {
+   "n": 1,
+   "date": "2026-10-19",
+   "hours": "2.5 h",
+   "title": "Baseline diagnostic",
+   "week": 1,
+   "tasks": [
+    {
+     "cat": "Math",
+     "time": "45 min",
+     "text": "Closed-book mini-set: 3 matrix/vector questions, 3 derivative/chain-rule questions, 4 probability/statistics questions. Use MML Chapters 2, 5 and 6 if you need questions.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML Ch 2 Exercises",
+       "file": "mml-book.pdf",
+       "page": 70,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=70",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%202%20Exercises%20-%20PDF.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 5 Exercises",
+       "file": "mml-book.pdf",
+       "page": 176,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=176",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%205%20Exercises%20-%20PDF.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 6 Exercises",
+       "file": "mml-book.pdf",
+       "page": 228,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=228",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%206%20Exercises%20-%20PDF.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d1t1"
+    },
+    {
+     "cat": "LeetCode diagnostic",
+     "time": "35 min",
+     "text": "Attempt [Two Sum #1](https://leetcode.com/problems/two-sum/), [Contains Duplicate #217](https://leetcode.com/problems/contains-duplicate/), and [Valid Anagram #242](https://leetcode.com/problems/valid-anagram/). Time-box each attempt; record whether you needed a hint and state the time/space complexity. Prioritize diagnosing gaps over finishing all three.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 1,
+       "title": "Two Sum",
+       "url": "https://leetcode.com/problems/two-sum/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 217,
+       "title": "Contains Duplicate",
+       "url": "https://leetcode.com/problems/contains-duplicate/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 242,
+       "title": "Valid Anagram",
+       "url": "https://leetcode.com/problems/valid-anagram/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d1t2"
+    },
+    {
+     "cat": "ML",
+     "time": "35 min",
+     "text": "Explain without notes: regression vs classification, train/validation/test, loss vs metric, gradient descent, PCA, clustering and neural-network layers. Then solve 5 basic questions from D2L Chapters 3–5.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §3 Linear Neural Networks for Regression",
+       "file": "d2l-en.pdf",
+       "page": 122,
+       "online": "https://d2l.ai/chapter_linear-regression/index.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §4 Linear Neural Networks for Classification",
+       "file": "d2l-en.pdf",
+       "page": 165,
+       "online": "https://d2l.ai/chapter_linear-classification/index.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §5 Multilayer Perceptrons",
+       "file": "d2l-en.pdf",
+       "page": 207,
+       "online": "https://d2l.ai/chapter_multilayer-perceptrons/index.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d1t3"
+    },
+    {
+     "cat": "Mark",
+     "time": "20 min",
+     "text": "Label every miss: concept, calculation, careless, or coding. Don't try to repair everything today.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d1t4"
+    },
+    {
+     "cat": "Error log",
+     "time": "15 min",
+     "text": "Rank your 5 highest-priority gaps. These are your repair targets for Week 1.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d1t5"
+    },
+    {
+     "cat": "Repair",
+     "time": "only if needed",
+     "text": "Video, only if needed: Essence of Linear Algebra.",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "3B1B Essence of Linear Algebra",
+       "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d1t6"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "date": "2026-10-20",
+   "hours": "2.5 h",
+   "title": "Vectors, matrices and model outputs",
+   "week": 1,
+   "tasks": [
+    {
+     "cat": "Math",
+     "time": "65 min",
+     "text": "MML Chapter 2, especially systems of equations, matrices, matrix-vector products, span/basis/rank. Attempt 4 end-of-chapter exercises; at least one should require solving a linear system.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML §2.1",
+       "file": "mml-book.pdf",
+       "page": 25,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=25"
+      },
+      {
+       "kind": "book",
+       "label": "MML §2.2",
+       "file": "mml-book.pdf",
+       "page": 28,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=28"
+      },
+      {
+       "kind": "book",
+       "label": "MML §2.3",
+       "file": "mml-book.pdf",
+       "page": 33,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=33"
+      },
+      {
+       "kind": "book",
+       "label": "MML §2.6",
+       "file": "mml-book.pdf",
+       "page": 50,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=50"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 2 Exercises",
+       "file": "mml-book.pdf",
+       "page": 70,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=70",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%202%20Exercises%20-%20PDF.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d2t1"
+    },
+    {
+     "cat": "LeetCode",
+     "time": "40 min",
+     "text": "Solve [Two Sum #1](https://leetcode.com/problems/two-sum/) and [Contains Duplicate #217](https://leetcode.com/problems/contains-duplicate/). For Two Sum, first write the brute-force O(n²) approach, then improve it with a hash map. Explain why the optimized version changes the time/space trade-off.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 1,
+       "title": "Two Sum",
+       "url": "https://leetcode.com/problems/two-sum/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 217,
+       "title": "Contains Duplicate",
+       "url": "https://leetcode.com/problems/contains-duplicate/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d2t2"
+    },
+    {
+     "cat": "ML",
+     "time": "25 min",
+     "text": "D2L §§3.1–3.4: write the linear-regression prediction equation, MSE loss, and matrix shapes for a batch of examples.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §3.1 Linear Regression",
+       "file": "d2l-en.pdf",
+       "page": 122,
+       "online": "https://d2l.ai/chapter_linear-regression/linear-regression.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §3.4 Linear Regression Implementation from Scratch",
+       "file": "d2l-en.pdf",
+       "page": 142,
+       "online": "https://d2l.ai/chapter_linear-regression/linear-regression-scratch.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d2t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "Watch only the linear-algebra video segment needed for the missed questions.",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "3B1B Essence of Linear Algebra",
+       "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d2t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Write the most common shape/algebra mistake.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d2t5"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "date": "2026-10-21",
+   "hours": "2.5 h",
+   "title": "Matrix geometry, data structures and regression loss",
+   "week": 1,
+   "tasks": [
+    {
+     "cat": "Math",
+     "time": "55 min",
+     "text": "MML Chapter 3: dot products, norms, distances, orthogonality and projections. Do 3 end-of-chapter exercises.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML §3.1",
+       "file": "mml-book.pdf",
+       "page": 77,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=77"
+      },
+      {
+       "kind": "book",
+       "label": "MML §3.2",
+       "file": "mml-book.pdf",
+       "page": 78,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=78"
+      },
+      {
+       "kind": "book",
+       "label": "MML §3.4",
+       "file": "mml-book.pdf",
+       "page": 82,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=82"
+      },
+      {
+       "kind": "book",
+       "label": "MML §3.8",
+       "file": "mml-book.pdf",
+       "page": 87,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=87"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 3 Exercises",
+       "file": "mml-book.pdf",
+       "page": 102,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=102",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%203%20Exercises%20-%20PDF.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d3t1"
+    },
+    {
+     "cat": "LeetCode",
+     "time": "45 min",
+     "text": "Solve [Valid Anagram #242](https://leetcode.com/problems/valid-anagram/) and [Valid Palindrome #125](https://leetcode.com/problems/valid-palindrome/). Compare a sorting-based solution with a frequency-count solution for Anagram; for Palindrome, handle punctuation/case and explain your two-pointer invariant.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 242,
+       "title": "Valid Anagram",
+       "url": "https://leetcode.com/problems/valid-anagram/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 125,
+       "title": "Valid Palindrome",
+       "url": "https://leetcode.com/problems/valid-palindrome/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d3t2"
+    },
+    {
+     "cat": "ML",
+     "time": "30 min",
+     "text": "D2L §§3.1, 3.4 and 3.6: calculate predictions and MSE by hand on a tiny dataset; explain overfitting/generalization in your own words.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §3.1 Linear Regression",
+       "file": "d2l-en.pdf",
+       "page": 122,
+       "online": "https://d2l.ai/chapter_linear-regression/linear-regression.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §3.4 Linear Regression Implementation from Scratch",
+       "file": "d2l-en.pdf",
+       "page": 142,
+       "online": "https://d2l.ai/chapter_linear-regression/linear-regression-scratch.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §3.6 Generalization",
+       "file": "d2l-en.pdf",
+       "page": 152,
+       "online": "https://d2l.ai/chapter_linear-regression/generalization.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d3t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "[StatQuest linear regression](https://www.youtube.com/watch?v=nk2CQITm_eo), only the segment needed.",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "StatQuest — Linear Regression",
+       "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d3t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d3t5"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "date": "2026-10-22",
+   "hours": "2.5 h",
+   "title": "Derivatives, recursion and gradient descent",
+   "week": 1,
+   "tasks": [
+    {
+     "cat": "Math",
+     "time": "60 min",
+     "text": "MML Chapter 5: derivatives, partial derivatives, gradients and chain rule. Do 3 end-of-chapter exercises. Include a gradient of a quadratic function.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML §5.1",
+       "file": "mml-book.pdf",
+       "page": 147,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=147"
+      },
+      {
+       "kind": "book",
+       "label": "MML §5.2",
+       "file": "mml-book.pdf",
+       "page": 152,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=152"
+      },
+      {
+       "kind": "book",
+       "label": "MML §5.3",
+       "file": "mml-book.pdf",
+       "page": 155,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=155"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 5 Exercises",
+       "file": "mml-book.pdf",
+       "page": 176,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=176",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%205%20Exercises%20-%20PDF.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d4t1"
+    },
+    {
+     "cat": "LeetCode",
+     "time": "40 min",
+     "text": "Solve [Reverse Linked List #206](https://leetcode.com/problems/reverse-linked-list/). Implement the iterative version first, then the recursive version if time permits. Trace pointer changes on a 3-node list and state the base case for recursion.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 206,
+       "title": "Reverse Linked List",
+       "url": "https://leetcode.com/problems/reverse-linked-list/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d4t2"
+    },
+    {
+     "cat": "ML",
+     "time": "30 min",
+     "text": "Derive one gradient-descent update for a one-parameter quadratic loss. Explain the direction of the gradient and the effect of a learning rate that is too high.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML §7.1",
+       "file": "mml-book.pdf",
+       "page": 233,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=233"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §12.3 Gradient Descent",
+       "file": "d2l-en.pdf",
+       "page": 522,
+       "online": "https://d2l.ai/chapter_optimization/gd.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d4t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "[Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) or [Gradient Descent, Step-by-Step](https://www.youtube.com/watch?v=sDv4f4s2SB8).",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "3B1B Essence of Calculus",
+       "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"
+      },
+      {
+       "kind": "video",
+       "label": "StatQuest — Gradient Descent",
+       "url": "https://www.youtube.com/watch?v=sDv4f4s2SB8"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d4t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d4t5"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "date": "2026-10-23",
+   "hours": "2.5 h",
+   "title": "Probability basics, logic and ML theory",
+   "week": 1,
+   "tasks": [
+    {
+     "cat": "Probability",
+     "time": "55 min",
+     "text": "Coursera Probability course Module 1 (Probability) practice/assignments, or MML Chapter 6. Compute probabilities using unions, intersections and complements; attempt at least 5 questions.",
+     "resources": [
+      {
+       "kind": "course",
+       "label": "Coursera: Intuitive Introduction to Probability",
+       "url": "https://www.coursera.org/learn/introductiontoprobability"
+      },
+      {
+       "kind": "book",
+       "label": "MML §6.1",
+       "file": "mml-book.pdf",
+       "page": 178,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=178"
+      },
+      {
+       "kind": "book",
+       "label": "MML §6.2",
+       "file": "mml-book.pdf",
+       "page": 184,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=184"
+      },
+      {
+       "kind": "book",
+       "label": "MML §6.3",
+       "file": "mml-book.pdf",
+       "page": 189,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=189"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 1 — counting & probability",
+       "file": "statprob-problemset/mit18_05_s22_pset01.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset01.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset01_sol.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d5t1"
+    },
+    {
+     "cat": "LeetCode",
+     "time": "40 min",
+     "text": "Solve [Valid Parentheses #20](https://leetcode.com/problems/valid-parentheses/) using a stack, then attempt [Move Zeroes #283](https://leetcode.com/problems/move-zeroes/) with in-place modification. Before coding, write down the invariant and test empty/minimum-size and repeated-value cases.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 20,
+       "title": "Valid Parentheses",
+       "url": "https://leetcode.com/problems/valid-parentheses/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 283,
+       "title": "Move Zeroes",
+       "url": "https://leetcode.com/problems/move-zeroes/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d5t2"
+    },
+    {
+     "cat": "ML theory",
+     "time": "35 min",
+     "text": "D2L §§3.6–3.7: training vs test error, overfitting, weight decay and the reason to keep validation data separate.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §3.6 Generalization",
+       "file": "d2l-en.pdf",
+       "page": 152,
+       "online": "https://d2l.ai/chapter_linear-regression/generalization.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §3.7 Weight Decay",
+       "file": "d2l-en.pdf",
+       "page": 158,
+       "online": "https://d2l.ai/chapter_linear-regression/weight-decay.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d5t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "[What Is Bayes' Theorem and How Is It Used?](https://www.youtube.com/watch?v=ONCOkccpk3w), if conditional probability is shaky.",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "StatQuest — Bayes' Theorem",
+       "url": "https://www.youtube.com/watch?v=ONCOkccpk3w"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d5t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d5t5"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "date": "2026-10-24",
+   "hours": "8 h",
+   "title": "Math/Python/regression workshop",
+   "week": 1,
+   "tasks": [
+    {
+     "cat": "Math",
+     "time": "2 h",
+     "text": "Redo the missed MML Chapter 2/3/5 exercises. Then solve a fresh set of 6 problems without notes: matrix multiplication, rank/basis, orthogonality/projection, derivatives, partial derivatives and chain rule.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML Ch 2 Exercises",
+       "file": "mml-book.pdf",
+       "page": 70,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=70",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%202%20Exercises%20-%20PDF.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 3 Exercises",
+       "file": "mml-book.pdf",
+       "page": 102,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=102",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%203%20Exercises%20-%20PDF.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 5 Exercises",
+       "file": "mml-book.pdf",
+       "page": 176,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=176",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%205%20Exercises%20-%20PDF.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d6t1"
+    },
+    {
+     "cat": "LeetCode",
+     "time": "1.5 h",
+     "text": "Work on [Group Anagrams #49](https://leetcode.com/problems/group-anagrams/) and [Product of Array Except Self #238](https://leetcode.com/problems/product-of-array-except-self/). These are medium-level pattern problems: try each independently for 25–30 minutes before reading hints. If you finish early, attempt [Top K Frequent Elements #347](https://leetcode.com/problems/top-k-frequent-elements/).",
+     "resources": [
+      {
+       "kind": "web",
+       "label": "LeetCode 75 study plan",
+       "url": "https://leetcode.com/studyplan/leetcode-75/"
+      }
+     ],
+     "problems": [
+      {
+       "id": 49,
+       "title": "Group Anagrams",
+       "url": "https://leetcode.com/problems/group-anagrams/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 238,
+       "title": "Product of Array Except Self",
+       "url": "https://leetcode.com/problems/product-of-array-except-self/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 347,
+       "title": "Top K Frequent Elements",
+       "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+       "difficulty": "Medium"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d6t2"
+    },
+    {
+     "cat": "ML",
+     "time": "1.5 h",
+     "text": "From scratch in NumPy, implement linear regression prediction, MSE, analytical gradient and 20 gradient-descent updates. Compare the loss before and after training.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §3.4 Linear Regression Implementation from Scratch",
+       "file": "d2l-en.pdf",
+       "page": 142,
+       "online": "https://d2l.ai/chapter_linear-regression/linear-regression-scratch.html"
+      },
+      {
+       "kind": "book",
+       "label": "MML §9.2",
+       "file": "mml-book.pdf",
+       "page": 298,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=298"
+      }
+     ],
+     "problems": [],
+     "workspace": "notebook",
+     "id": "d6t3"
+    },
+    {
+     "cat": "Timed set",
+     "time": "1.5 h",
+     "text": "12 mixed questions across math, Python and regression. No videos or notes during the set.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d6t4"
+    },
+    {
+     "cat": "Mark/re-solve",
+     "time": "1 h",
+     "text": "Correct every miss and solve it again from a blank page or file.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d6t5"
+    },
+    {
+     "cat": "Log",
+     "time": "30 min",
+     "text": "Identify patterns. Don't write a long summary; write compact rules and examples.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d6t6"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "date": "2026-10-25",
+   "hours": "8 h",
+   "title": "Probability, descriptive statistics and algorithms",
+   "week": 1,
+   "tasks": [
+    {
+     "cat": "Probability",
+     "time": "2 h",
+     "text": "MML Chapter 6 end-of-chapter exercises plus 6 MIT OCW probability questions. Cover sample spaces, conditional probability, independence, Bayes' rule and expected value.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML Ch 6 Exercises",
+       "file": "mml-book.pdf",
+       "page": 228,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=228",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%206%20Exercises%20-%20PDF.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 1 — counting & probability",
+       "file": "statprob-problemset/mit18_05_s22_pset01.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset01.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset01_sol.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 2 — conditional probability & Bayes",
+       "file": "statprob-problemset/mit18_05_s22_pset02.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset02.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset02_sol.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 3 — independence, discrete RVs, expectation",
+       "file": "statprob-problemset/mit18_05_s22_pset03.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset03.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset03_sol.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d7t1"
+    },
+    {
+     "cat": "Statistics",
+     "time": "1 h",
+     "text": "Calculate mean, median, variance, standard deviation and covariance by hand on tiny datasets. Explain sample vs population variance.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML §6.4",
+       "file": "mml-book.pdf",
+       "page": 192,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=192"
+      },
+      {
+       "kind": "video",
+       "label": "StatQuest — Mean, Variance, SD",
+       "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d7t2"
+    },
+    {
+     "cat": "LeetCode/complexity",
+     "time": "1.5 h",
+     "text": "Solve [Binary Search #704](https://leetcode.com/problems/binary-search/) and [Search Insert Position #35](https://leetcode.com/problems/search-insert-position/). Implement iterative binary search, explain the loop invariant, and compare O(log n) search with linear O(n) scanning. Then estimate complexity for one of your Week 1 hash-map solutions.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "Think Python Appendix B Analysis of Algorithms",
+       "file": "thinkpython2.pdf",
+       "page": 223,
+       "online": "https://greenteapress.com/thinkpython2/thinkpython2.pdf#page=223"
+      }
+     ],
+     "problems": [
+      {
+       "id": 704,
+       "title": "Binary Search",
+       "url": "https://leetcode.com/problems/binary-search/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 35,
+       "title": "Search Insert Position",
+       "url": "https://leetcode.com/problems/search-insert-position/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d7t3"
+    },
+    {
+     "cat": "LeetCode",
+     "time": "1 h",
+     "text": "Do a timed retest of two problems you missed earlier in the week, then attempt one unseen easy/medium problem from the LeetCode 75 study plan. Spend the final 10 minutes explaining your approach and complexity without looking at the solution.",
+     "resources": [
+      {
+       "kind": "web",
+       "label": "LeetCode 75 study plan",
+       "url": "https://leetcode.com/studyplan/leetcode-75/"
+      }
+     ],
+     "problems": [],
+     "workspace": "leetcode",
+     "id": "d7t4"
+    },
+    {
+     "cat": "Weekly mini-test",
+     "time": "1.5 h",
+     "text": "5 math questions, 4 coding/tracing questions and 5 ML questions, closed book.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d7t5"
+    },
+    {
+     "cat": "Review",
+     "time": "1 h",
+     "text": "Mark; schedule mistakes for Days 8–10.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d7t6"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "date": "2026-10-26",
+   "hours": "2.5 h",
+   "title": "Conditional probability and classification",
+   "week": 2,
+   "tasks": [
+    {
+     "cat": "Probability",
+     "time": "60 min",
+     "text": "Coursera Probability Module 2 (Conditional Probability) questions 2.1–2.6, or MML Chapter 6. Solve 5 problems with conditional probability, independence and Bayes' rule.",
+     "resources": [
+      {
+       "kind": "course",
+       "label": "Coursera: Intuitive Introduction to Probability",
+       "url": "https://www.coursera.org/learn/introductiontoprobability"
+      },
+      {
+       "kind": "book",
+       "label": "MML §6.3",
+       "file": "mml-book.pdf",
+       "page": 189,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=189"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 2 — conditional probability & Bayes",
+       "file": "statprob-problemset/mit18_05_s22_pset02.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset02.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset02_sol.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d8t1"
+    },
+    {
+     "cat": "LeetCode",
+     "time": "35 min",
+     "text": "Solve [Top K Frequent Elements #347](https://leetcode.com/problems/top-k-frequent-elements/) or, if it is too difficult today, start with [Group Anagrams #49](https://leetcode.com/problems/group-anagrams/). Focus on frequency maps, tuple keys, and why a dictionary is a better fit than repeated nested scans.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 347,
+       "title": "Top K Frequent Elements",
+       "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 49,
+       "title": "Group Anagrams",
+       "url": "https://leetcode.com/problems/group-anagrams/",
+       "difficulty": "Medium"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d8t2"
+    },
+    {
+     "cat": "ML",
+     "time": "35 min",
+     "text": "D2L §§4.1–4.4: score vectors, softmax, cross-entropy and the difference between binary and multiclass classification.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §4.1 Softmax Regression",
+       "file": "d2l-en.pdf",
+       "page": 165,
+       "online": "https://d2l.ai/chapter_linear-classification/softmax-regression.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §4.4 Softmax Regression Implementation from Scratch",
+       "file": "d2l-en.pdf",
+       "page": 179,
+       "online": "https://d2l.ai/chapter_linear-classification/softmax-regression-scratch.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d8t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "[Bayes' theorem video](https://www.youtube.com/watch?v=ONCOkccpk3w).",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "StatQuest — Bayes' Theorem",
+       "url": "https://www.youtube.com/watch?v=ONCOkccpk3w"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d8t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d8t5"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "date": "2026-10-27",
+   "hours": "2.5 h",
+   "title": "Random variables, recursion and metrics",
+   "week": 2,
+   "tasks": [
+    {
+     "cat": "Probability",
+     "time": "55 min",
+     "text": "Coursera modules 4–5 (Discrete Random Variables and Normal Distribution): expected value, variance, binomial and normal distribution. Do at least 5 assignments/questions.",
+     "resources": [
+      {
+       "kind": "course",
+       "label": "Coursera: Intuitive Introduction to Probability",
+       "url": "https://www.coursera.org/learn/introductiontoprobability"
+      },
+      {
+       "kind": "book",
+       "label": "MML §6.4",
+       "file": "mml-book.pdf",
+       "page": 192,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=192"
+      },
+      {
+       "kind": "book",
+       "label": "MML §6.5",
+       "file": "mml-book.pdf",
+       "page": 203,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=203"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 3 — independence, discrete RVs, expectation",
+       "file": "statprob-problemset/mit18_05_s22_pset03.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset03.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset03_sol.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 4 — continuous RVs, exponential & normal",
+       "file": "statprob-problemset/mit18_05_s22_pset04.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset04.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset04_sol.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d9t1"
+    },
+    {
+     "cat": "LeetCode",
+     "time": "40 min",
+     "text": "Solve [Climbing Stairs #70](https://leetcode.com/problems/climbing-stairs/) and explain the recursive recurrence before implementing the efficient solution. Then revisit [Reverse Linked List #206](https://leetcode.com/problems/reverse-linked-list/) and write both iterative and recursive versions; compare their auxiliary space.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "Think Python Ch 5 Conditionals and recursion",
+       "file": "thinkpython2.pdf",
+       "page": 61,
+       "online": "https://greenteapress.com/thinkpython2/thinkpython2.pdf#page=61"
+      }
+     ],
+     "problems": [
+      {
+       "id": 70,
+       "title": "Climbing Stairs",
+       "url": "https://leetcode.com/problems/climbing-stairs/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 206,
+       "title": "Reverse Linked List",
+       "url": "https://leetcode.com/problems/reverse-linked-list/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d9t2"
+    },
+    {
+     "cat": "Classification",
+     "time": "35 min",
+     "text": "Compute TP/FP/TN/FN, precision, recall, specificity, accuracy and F1 from 2 tiny confusion matrices. Explain why accuracy can be misleading for imbalanced classes.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "ISLR Ch 4 Classification",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 142,
+       "online": "https://www.statlearning.com/"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d9t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "[Mean, Variance and Standard Deviation](https://www.youtube.com/watch?v=SzZ6GpcfoQY) or [Normal Distribution](https://www.youtube.com/watch?v=rzFX5NWojp0).",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "StatQuest — Mean, Variance, SD",
+       "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+      },
+      {
+       "kind": "video",
+       "label": "StatQuest — Normal Distribution",
+       "url": "https://www.youtube.com/watch?v=rzFX5NWojp0"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d9t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d9t5"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "date": "2026-10-28",
+   "hours": "2.5 h",
+   "title": "Descriptive statistics, complexity and logistic regression",
+   "week": 2,
+   "tasks": [
+    {
+     "cat": "Statistics",
+     "time": "50 min",
+     "text": "MIT 18.05 problem set/questions on distributions and expectation. Calculate mean, variance, covariance and correlation; interpret what each measures.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 3 — independence, discrete RVs, expectation",
+       "file": "statprob-problemset/mit18_05_s22_pset03.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset03.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset03_sol.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 5 — joint distributions, covariance & correlation",
+       "file": "statprob-problemset/mit18_05_s22_pset05.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset05.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset05_sol.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d10t1"
+    },
+    {
+     "cat": "LeetCode/complexity",
+     "time": "45 min",
+     "text": "Solve [Binary Search #704](https://leetcode.com/problems/binary-search/) and attempt [Search in Rotated Sorted Array #33](https://leetcode.com/problems/search-in-rotated-sorted-array/) (medium). Explain when the sorted-half invariant holds and write time/space complexity before checking any editorial.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 704,
+       "title": "Binary Search",
+       "url": "https://leetcode.com/problems/binary-search/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 33,
+       "title": "Search in Rotated Sorted Array",
+       "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+       "difficulty": "Medium"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d10t2"
+    },
+    {
+     "cat": "Classification",
+     "time": "35 min",
+     "text": "D2L §4.1 / ISLP Chapter 4: sigmoid/logistic regression, decision threshold, log loss and regularization. Calculate probabilities from simple logits.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §4.1 Softmax Regression",
+       "file": "d2l-en.pdf",
+       "page": 165,
+       "online": "https://d2l.ai/chapter_linear-classification/softmax-regression.html"
+      },
+      {
+       "kind": "book",
+       "label": "ISLR Ch 4 Classification",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 142,
+       "online": "https://www.statlearning.com/"
+      },
+      {
+       "kind": "book",
+       "label": "ISLR Ch 4 Exercises",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 183,
+       "online": "https://www.statlearning.com/"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d10t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "[Logistic regression coefficients](https://www.youtube.com/watch?v=vN5cNN2-HWE).",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "StatQuest — Logistic Regression Coefficients",
+       "url": "https://www.youtube.com/watch?v=vN5cNN2-HWE"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d10t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d10t5"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "date": "2026-10-29",
+   "hours": "2.5 h",
+   "title": "Inference, OOP and generalization",
+   "week": 2,
+   "tasks": [
+    {
+     "cat": "Statistics",
+     "time": "50 min",
+     "text": "Selected MIT 18.05 questions on sampling, confidence intervals and hypothesis testing. Know what a p-value/interval means, and what it does not mean.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 8 — NHST & p-values",
+       "file": "statprob-problemset/mit18_05_s22_pset08.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset08.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset08_sol.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 9 — t-tests",
+       "file": "statprob-problemset/mit18_05_s22_pset09.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset09.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset09_sol.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 10 — confidence intervals",
+       "file": "statprob-problemset/mit18_05_s22_pset10.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset10.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset10_sol.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d11t1"
+    },
+    {
+     "cat": "LeetCode/OOP",
+     "time": "45 min",
+     "text": "Implement [Design Parking System #1603](https://leetcode.com/problems/design-parking-system/) as a class, then try [Min Stack #155](https://leetcode.com/problems/min-stack/) as the medium extension. Make constructors, instance state, and method behavior explicit; test repeated operations and empty-stack edge cases.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "Think Python Ch 15 Classes and objects",
+       "file": "thinkpython2.pdf",
+       "page": 169,
+       "online": "https://greenteapress.com/thinkpython2/thinkpython2.pdf#page=169"
+      }
+     ],
+     "problems": [
+      {
+       "id": 1603,
+       "title": "Design Parking System",
+       "url": "https://leetcode.com/problems/design-parking-system/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 155,
+       "title": "Min Stack",
+       "url": "https://leetcode.com/problems/min-stack/",
+       "difficulty": "Medium"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d11t2"
+    },
+    {
+     "cat": "ML theory",
+     "time": "35 min",
+     "text": "ISLP Chapter 5/6 or D2L generalization sections: validation, cross-validation, regularization, bias–variance trade-off and data leakage.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "ISLR Ch 5 Resampling Methods",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 190,
+       "online": "https://www.statlearning.com/"
+      },
+      {
+       "kind": "book",
+       "label": "ISLR Ch 6 Model Selection & Regularization",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 218,
+       "online": "https://www.statlearning.com/"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §3.6 Generalization",
+       "file": "d2l-en.pdf",
+       "page": 152,
+       "online": "https://d2l.ai/chapter_linear-regression/generalization.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §4.6 Generalization in Classification",
+       "file": "d2l-en.pdf",
+       "page": 187,
+       "online": "https://d2l.ai/chapter_linear-classification/generalization-classification.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d11t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "Use StatQuest's [video index](https://statquest.org/video_index.html) for the exact statistical concept you missed.",
+     "resources": [
+      {
+       "kind": "web",
+       "label": "StatQuest video index",
+       "url": "https://statquest.org/video_index.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d11t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d11t5"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "date": "2026-10-30",
+   "hours": "2.5 h",
+   "title": "Mixed probability/statistics and programming checkpoint",
+   "week": 2,
+   "tasks": [
+    {
+     "cat": "Math",
+     "time": "55 min",
+     "text": "8 timed problems across conditional probability, expectation/variance, normal distribution, covariance and basic inference. Use MIT OCW problem sets/exams.",
+     "resources": [
+      {
+       "kind": "web",
+       "label": "MIT 18.05 Practice Exam 1",
+       "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_prac_exam01_all.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_prac_exam01_all_sol.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 5 — joint distributions, covariance & correlation",
+       "file": "statprob-problemset/mit18_05_s22_pset05.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset05.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset05_sol.pdf"
+      },
+      {
+       "kind": "web",
+       "label": "MIT 18.05 exams page",
+       "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/exams/"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d12t1"
+    },
+    {
+     "cat": "LeetCode checkpoint",
+     "time": "45 min",
+     "text": "Attempt [Two Sum #1](https://leetcode.com/problems/two-sum/), [Valid Parentheses #20](https://leetcode.com/problems/valid-parentheses/), and [Climbing Stairs #70](https://leetcode.com/problems/climbing-stairs/). Time-box each at 15 minutes, add edge-case tests, and do not use autocomplete or AI hints during the first attempt.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 1,
+       "title": "Two Sum",
+       "url": "https://leetcode.com/problems/two-sum/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 20,
+       "title": "Valid Parentheses",
+       "url": "https://leetcode.com/problems/valid-parentheses/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 70,
+       "title": "Climbing Stairs",
+       "url": "https://leetcode.com/problems/climbing-stairs/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d12t2"
+    },
+    {
+     "cat": "ML",
+     "time": "30 min",
+     "text": "Compare linear regression, logistic regression, softmax regression and k-nearest neighbors by input/output type, loss/objective, and use case.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §3.1 Linear Regression",
+       "file": "d2l-en.pdf",
+       "page": 122,
+       "online": "https://d2l.ai/chapter_linear-regression/linear-regression.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §4.1 Softmax Regression",
+       "file": "d2l-en.pdf",
+       "page": 165,
+       "online": "https://d2l.ai/chapter_linear-classification/softmax-regression.html"
+      },
+      {
+       "kind": "book",
+       "label": "ISLR Ch 2 Statistical Learning",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 30,
+       "online": "https://www.statlearning.com/"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d12t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "Revisit the two lowest-scoring task types.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d12t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d12t5"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "date": "2026-10-31",
+   "hours": "8 h",
+   "title": "Probability/statistics and classification practice day",
+   "week": 2,
+   "tasks": [
+    {
+     "cat": "Probability",
+     "time": "2 h",
+     "text": "Attempt 8–10 MIT 18.05 problems spanning conditional probability, Bayes' rule, random variables, expectation, normal distribution and independence.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 2 — conditional probability & Bayes",
+       "file": "statprob-problemset/mit18_05_s22_pset02.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset02.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset02_sol.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 3 — independence, discrete RVs, expectation",
+       "file": "statprob-problemset/mit18_05_s22_pset03.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset03.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset03_sol.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 4 — continuous RVs, exponential & normal",
+       "file": "statprob-problemset/mit18_05_s22_pset04.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset04.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset04_sol.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d13t1"
+    },
+    {
+     "cat": "Statistics",
+     "time": "1 h",
+     "text": "Take a practice exam section with no notes; mark with the official solution. Redo every wrong question.",
+     "resources": [
+      {
+       "kind": "web",
+       "label": "MIT 18.05 Practice Exam 2a",
+       "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_prac_exam02a.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_prac_exam02a_sol.pdf"
+      },
+      {
+       "kind": "web",
+       "label": "MIT 18.05 Practice Exam 2b",
+       "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_prac_exam02b.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_prac_exam02b_sol.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d13t2"
+    },
+    {
+     "cat": "LeetCode/data structures",
+     "time": "1.5 h",
+     "text": "Attempt [Valid Parentheses #20](https://leetcode.com/problems/valid-parentheses/), [Group Anagrams #49](https://leetcode.com/problems/group-anagrams/), [Product of Array Except Self #238](https://leetcode.com/problems/product-of-array-except-self/), and [Binary Search #704](https://leetcode.com/problems/binary-search/). Time-box each attempt; use the last 15 minutes to explain the data structure choice and Big-O. Treat [3Sum #15](https://leetcode.com/problems/3sum/) as an optional stretch problem.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 20,
+       "title": "Valid Parentheses",
+       "url": "https://leetcode.com/problems/valid-parentheses/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 49,
+       "title": "Group Anagrams",
+       "url": "https://leetcode.com/problems/group-anagrams/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 238,
+       "title": "Product of Array Except Self",
+       "url": "https://leetcode.com/problems/product-of-array-except-self/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 704,
+       "title": "Binary Search",
+       "url": "https://leetcode.com/problems/binary-search/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 15,
+       "title": "3Sum",
+       "url": "https://leetcode.com/problems/3sum/",
+       "difficulty": "Medium"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d13t3"
+    },
+    {
+     "cat": "Classification",
+     "time": "1.5 h",
+     "text": "From scratch, calculate a logistic-regression probability, cross-entropy for a tiny example, and a confusion matrix with metrics. Explain the decision boundary.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §4.1 Softmax Regression",
+       "file": "d2l-en.pdf",
+       "page": 165,
+       "online": "https://d2l.ai/chapter_linear-classification/softmax-regression.html"
+      },
+      {
+       "kind": "book",
+       "label": "ISLR Ch 4 Classification",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 142,
+       "online": "https://www.statlearning.com/"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d13t4"
+    },
+    {
+     "cat": "Timed mixed set",
+     "time": "1 h",
+     "text": "10 problems in one sitting.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d13t5"
+    },
+    {
+     "cat": "Review",
+     "time": "1 h",
+     "text": "Mark, re-solve and update the error log.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d13t6"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "date": "2026-11-01",
+   "hours": "8 h",
+   "title": "Week 2 checkpoint",
+   "week": 2,
+   "tasks": [
+    {
+     "cat": "Closed-book test",
+     "time": "2 h",
+     "text": "6 math/probability questions, 3 timed LeetCode problems (choose one array/hash-map, one stack/recursion, and one search problem from the week), and 6 ML/classification questions. No hints during the timed portion.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d14t1"
+    },
+    {
+     "cat": "Marking",
+     "time": "1 h",
+     "text": "Classify errors and calculate accuracy by topic, not only overall.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d14t2"
+    },
+    {
+     "cat": "Repair",
+     "time": "2 h",
+     "text": "Work on the three weakest concepts from Weeks 1–2. Use one reference or video per gap.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d14t3"
+    },
+    {
+     "cat": "Implementation",
+     "time": "1 h",
+     "text": "Implement a basic classifier pipeline with scikit-learn: split data, fit, predict, calculate metrics. Avoid spending time on dataset setup.",
+     "resources": [
+      {
+       "kind": "web",
+       "label": "scikit-learn: Getting started",
+       "url": "https://scikit-learn.org/stable/getting_started.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "notebook",
+     "id": "d14t4"
+    },
+    {
+     "cat": "Recall drill",
+     "time": "1 h",
+     "text": "Blank-page formula and definitions test.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d14t5"
+    },
+    {
+     "cat": "Plan",
+     "time": "1 h",
+     "text": "Choose which existing errors to retest on Days 15–17.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d14t6"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "date": "2026-11-02",
+   "hours": "2.5 h",
+   "title": "Gradients and neural-network forward pass",
+   "week": 3,
+   "tasks": [
+    {
+     "cat": "Math",
+     "time": "55 min",
+     "text": "MML Chapter 5 or D2L §§2.4–2.5. Compute partial derivatives and a gradient using the chain rule. Practise shapes of vectors/matrices in derivatives.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML §5.2",
+       "file": "mml-book.pdf",
+       "page": 152,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=152"
+      },
+      {
+       "kind": "book",
+       "label": "MML §5.3",
+       "file": "mml-book.pdf",
+       "page": 155,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=155"
+      },
+      {
+       "kind": "book",
+       "label": "MML §5.4",
+       "file": "mml-book.pdf",
+       "page": 161,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=161"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §2.4 Calculus",
+       "file": "d2l-en.pdf",
+       "page": 94,
+       "online": "https://d2l.ai/chapter_preliminaries/calculus.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §2.5 Automatic Differentiation",
+       "file": "d2l-en.pdf",
+       "page": 99,
+       "online": "https://d2l.ai/chapter_preliminaries/autograd.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d15t1"
+    },
+    {
+     "cat": "LeetCode",
+     "time": "35 min",
+     "text": "Retest [Climbing Stairs #70](https://leetcode.com/problems/climbing-stairs/) without notes, then implement [Reverse Linked List #206](https://leetcode.com/problems/reverse-linked-list/) recursively if you only solved it iteratively before. Trace the call stack and compare auxiliary space.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 70,
+       "title": "Climbing Stairs",
+       "url": "https://leetcode.com/problems/climbing-stairs/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 206,
+       "title": "Reverse Linked List",
+       "url": "https://leetcode.com/problems/reverse-linked-list/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d15t2"
+    },
+    {
+     "cat": "ML",
+     "time": "40 min",
+     "text": "D2L §5.1: perform a tiny MLP forward pass by hand: weighted sum, bias, activation, output and loss.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §5.1 Multilayer Perceptrons",
+       "file": "d2l-en.pdf",
+       "page": 207,
+       "online": "https://d2l.ai/chapter_multilayer-perceptrons/mlp.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d15t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "[What Is a Neural Network?](https://www.youtube.com/watch?v=aircAruvnKk).",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "3B1B — What Is a Neural Network?",
+       "url": "https://www.youtube.com/watch?v=aircAruvnKk"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d15t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d15t5"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "date": "2026-11-03",
+   "hours": "2.5 h",
+   "title": "Gradient descent and optimization",
+   "week": 3,
+   "tasks": [
+    {
+     "cat": "Math/optimization",
+     "time": "55 min",
+     "text": "MML Chapter 7, especially gradient descent and learning-rate behavior; attempt the end-of-chapter exercises.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML §7.1",
+       "file": "mml-book.pdf",
+       "page": 233,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=233"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 7 Exercises",
+       "file": "mml-book.pdf",
+       "page": 253,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=253",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%207%20Exercises%20-%20PDF.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d16t1"
+    },
+    {
+     "cat": "Python",
+     "time": "40 min",
+     "text": "Implement gradient descent on a 1D quadratic using a function that returns the loss and gradient. Test too-small, reasonable and too-large learning rates.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §12.3 Gradient Descent",
+       "file": "d2l-en.pdf",
+       "page": 522,
+       "online": "https://d2l.ai/chapter_optimization/gd.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "notebook",
+     "id": "d16t2"
+    },
+    {
+     "cat": "ML",
+     "time": "35 min",
+     "text": "D2L §§12.3–12.11: distinguish batch GD, SGD, minibatch SGD, momentum, Adam and learning-rate schedules at a conceptual level.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §12.3 Gradient Descent",
+       "file": "d2l-en.pdf",
+       "page": 522,
+       "online": "https://d2l.ai/chapter_optimization/gd.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §12.4 Stochastic Gradient Descent",
+       "file": "d2l-en.pdf",
+       "page": 532,
+       "online": "https://d2l.ai/chapter_optimization/sgd.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §12.6 Momentum",
+       "file": "d2l-en.pdf",
+       "page": 550,
+       "online": "https://d2l.ai/chapter_optimization/momentum.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §12.10 Adam",
+       "file": "d2l-en.pdf",
+       "page": 572,
+       "online": "https://d2l.ai/chapter_optimization/adam.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §12.11 Learning Rate Scheduling",
+       "file": "d2l-en.pdf",
+       "page": 576,
+       "online": "https://d2l.ai/chapter_optimization/lr-scheduler.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d16t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "[Gradient Descent, Step-by-Step](https://www.youtube.com/watch?v=sDv4f4s2SB8) or [3Blue1Brown gradient descent](https://www.youtube.com/watch?v=IHZwWFHWa-w).",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "StatQuest — Gradient Descent",
+       "url": "https://www.youtube.com/watch?v=sDv4f4s2SB8"
+      },
+      {
+       "kind": "video",
+       "label": "3B1B — Gradient Descent",
+       "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d16t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d16t5"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "date": "2026-11-04",
+   "hours": "2.5 h",
+   "title": "Backpropagation and network behavior",
+   "week": 3,
+   "tasks": [
+    {
+     "cat": "Calculus",
+     "time": "45 min",
+     "text": "Solve 4 chain-rule/partial-derivative problems, including one composition of functions.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML §5.2",
+       "file": "mml-book.pdf",
+       "page": 152,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=152"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 5 Exercises",
+       "file": "mml-book.pdf",
+       "page": 176,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=176",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%205%20Exercises%20-%20PDF.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d17t1"
+    },
+    {
+     "cat": "Neural networks",
+     "time": "55 min",
+     "text": "D2L §§5.1, 5.3 and 5.4. Trace forward propagation and backpropagation through a 2-layer toy network; explain why nonlinear activations matter, and what vanishing gradients/poor initialization mean.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §5.1 Multilayer Perceptrons",
+       "file": "d2l-en.pdf",
+       "page": 207,
+       "online": "https://d2l.ai/chapter_multilayer-perceptrons/mlp.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §5.3 Forward Propagation, Backward Propagation, and Computational Graphs",
+       "file": "d2l-en.pdf",
+       "page": 219,
+       "online": "https://d2l.ai/chapter_multilayer-perceptrons/backprop.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §5.4 Numerical Stability and Initialization",
+       "file": "d2l-en.pdf",
+       "page": 224,
+       "online": "https://d2l.ai/chapter_multilayer-perceptrons/numerical-stability-and-init.html"
+      },
+      {
+       "kind": "book",
+       "label": "MML §5.6",
+       "file": "mml-book.pdf",
+       "page": 165,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=165"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d17t2"
+    },
+    {
+     "cat": "LeetCode/OOP",
+     "time": "30 min",
+     "text": "Attempt [Implement Queue using Stacks #232](https://leetcode.com/problems/implement-queue-using-stacks/). Design the class interface first, then implement push, pop, peek, and empty. Explain why the amortized complexity differs from the worst case for an individual operation.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 232,
+       "title": "Implement Queue using Stacks",
+       "url": "https://leetcode.com/problems/implement-queue-using-stacks/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d17t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "[What Is Backpropagation?](https://www.youtube.com/watch?v=Ilg3ggewQ5U) or [Backpropagation Calculus](https://www.youtube.com/watch?v=tIeHLnjs5U8).",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "3B1B — What Is Backpropagation?",
+       "url": "https://www.youtube.com/watch?v=Ilg3ggewQ5U"
+      },
+      {
+       "kind": "video",
+       "label": "3B1B — Backpropagation Calculus",
+       "url": "https://www.youtube.com/watch?v=tIeHLnjs5U8"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d17t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d17t5"
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "date": "2026-11-05",
+   "hours": "2.5 h",
+   "title": "Eigenvectors, SVD and PCA",
+   "week": 3,
+   "tasks": [
+    {
+     "cat": "Linear algebra",
+     "time": "55 min",
+     "text": "MML Chapter 4, focus on eigenvalues/eigenvectors and SVD; do 3 end-of-chapter exercises.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML §4.2",
+       "file": "mml-book.pdf",
+       "page": 111,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=111"
+      },
+      {
+       "kind": "book",
+       "label": "MML §4.4",
+       "file": "mml-book.pdf",
+       "page": 121,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=121"
+      },
+      {
+       "kind": "book",
+       "label": "MML §4.5",
+       "file": "mml-book.pdf",
+       "page": 125,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=125"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 4 Exercises",
+       "file": "mml-book.pdf",
+       "page": 143,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=143",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%204%20Exercises%20-%20PDF.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d18t1"
+    },
+    {
+     "cat": "PCA",
+     "time": "45 min",
+     "text": "MML Chapter 10 / ISLP Chapter 12: center data, form a covariance matrix, identify the role of eigenvectors/eigenvalues and explain variance retained after dimensionality reduction.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML Ch 10 PCA",
+       "file": "mml-book.pdf",
+       "page": 323,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=323"
+      },
+      {
+       "kind": "book",
+       "label": "MML §10.2",
+       "file": "mml-book.pdf",
+       "page": 326,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=326"
+      },
+      {
+       "kind": "book",
+       "label": "ISLR Ch 10 Unsupervised Learning (= ISLP Ch 12)",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 388,
+       "online": "https://www.statlearning.com/"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d18t2"
+    },
+    {
+     "cat": "Python",
+     "time": "30 min",
+     "text": "Use NumPy to compute a covariance matrix and run PCA on a tiny dataset. Check output dimensions and explain the transformed coordinates.",
+     "resources": [],
+     "problems": [],
+     "workspace": "notebook",
+     "id": "d18t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "[StatQuest PCA, Step-by-Step](https://www.youtube.com/watch?v=FgakZw6K1QQ).",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "StatQuest — PCA",
+       "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d18t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d18t5"
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "date": "2026-11-06",
+   "hours": "2.5 h",
+   "title": "Unsupervised learning and theory",
+   "week": 3,
+   "tasks": [
+    {
+     "cat": "ML",
+     "time": "55 min",
+     "text": "ISLP Chapter 12 and MML Chapter 11: clustering, k-means objective, centroid update, Gaussian-mixture intuition, and how unsupervised learning differs from classification.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "ISLR Ch 10 Unsupervised Learning (= ISLP Ch 12)",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 388,
+       "online": "https://www.statlearning.com/"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 11 Gaussian Mixture Models",
+       "file": "mml-book.pdf",
+       "page": 354,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=354"
+      },
+      {
+       "kind": "book",
+       "label": "MML §11.3",
+       "file": "mml-book.pdf",
+       "page": 366,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=366"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d19t1"
+    },
+    {
+     "cat": "Python/algorithms",
+     "time": "40 min",
+     "text": "Implement one k-means iteration on a tiny 2D dataset or trace one manually. State the runtime bottleneck in terms of samples, clusters and dimensions.",
+     "resources": [],
+     "problems": [],
+     "workspace": "notebook",
+     "id": "d19t2"
+    },
+    {
+     "cat": "ML theory",
+     "time": "35 min",
+     "text": "Compare PCA, k-means, GMM, SVM and logistic regression by goal, supervision, assumptions and output.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML Ch 12 SVM Classification",
+       "file": "mml-book.pdf",
+       "page": 376,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=376"
+      },
+      {
+       "kind": "book",
+       "label": "ISLR Ch 4 Classification",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 142,
+       "online": "https://www.statlearning.com/"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d19t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "[K-means Clustering](https://www.youtube.com/watch?v=4b5d3muPQmA).",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "StatQuest — K-means",
+       "url": "https://www.youtube.com/watch?v=4b5d3muPQmA"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d19t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d19t5"
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "date": "2026-11-07",
+   "hours": "8 h",
+   "title": "Convolution and CNN foundations",
+   "week": 3,
+   "tasks": [
+    {
+     "cat": "Convolution",
+     "time": "1.5 h",
+     "text": "Watch [But What Is a Convolution?](https://www.youtube.com/watch?v=KuXjwB4LzSA) only as needed, then calculate valid convolution values for at least two tiny matrices and kernels by hand.",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "3B1B — But What Is a Convolution?",
+       "url": "https://www.youtube.com/watch?v=KuXjwB4LzSA"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §7.2 Convolutions for Images",
+       "file": "d2l-en.pdf",
+       "page": 280,
+       "online": "https://d2l.ai/chapter_convolutional-neural-networks/conv-layer.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d20t1"
+    },
+    {
+     "cat": "CNN math",
+     "time": "1 h",
+     "text": "Solve output-size questions for convolution/pooling with different input size, kernel, stride and padding. Explain channels, feature maps and parameter sharing.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §7.3 Padding and Stride",
+       "file": "d2l-en.pdf",
+       "page": 287,
+       "online": "https://d2l.ai/chapter_convolutional-neural-networks/padding-and-strides.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §7.4 Multiple Input and Multiple Output Channels",
+       "file": "d2l-en.pdf",
+       "page": 292,
+       "online": "https://d2l.ai/chapter_convolutional-neural-networks/channels.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §7.5 Pooling",
+       "file": "d2l-en.pdf",
+       "page": 297,
+       "online": "https://d2l.ai/chapter_convolutional-neural-networks/pooling.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d20t2"
+    },
+    {
+     "cat": "D2L practice",
+     "time": "1.5 h",
+     "text": "Work through §§7.1–7.6; attempt several end-of-section exercises, including changes to pooling, convolution window size, output channels and number of layers.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §7.1 From Fully Connected Layers to Convolutions",
+       "file": "d2l-en.pdf",
+       "page": 274,
+       "online": "https://d2l.ai/chapter_convolutional-neural-networks/why-conv.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §7.6 Convolutional Neural Networks (LeNet)",
+       "file": "d2l-en.pdf",
+       "page": 302,
+       "online": "https://d2l.ai/chapter_convolutional-neural-networks/lenet.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d20t3"
+    },
+    {
+     "cat": "Basic image processing",
+     "time": "1 h",
+     "text": "Explain image as a tensor, grayscale vs RGB channels, filters, smoothing, edge detection, padding and downsampling. Connect convolution to image filtering.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §7.2 Convolutions for Images",
+       "file": "d2l-en.pdf",
+       "page": 280,
+       "online": "https://d2l.ai/chapter_convolutional-neural-networks/conv-layer.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d20t4"
+    },
+    {
+     "cat": "Implementation",
+     "time": "1.5 h",
+     "text": "Compute a convolution and max-pooling operation manually or with NumPy. Then trace the dimensions through a tiny CNN.",
+     "resources": [],
+     "problems": [],
+     "workspace": "notebook",
+     "id": "d20t5"
+    },
+    {
+     "cat": "Timed review",
+     "time": "1 h",
+     "text": "8 questions on neural nets, gradients and CNN dimensions.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d20t6"
+    },
+    {
+     "cat": "Mark",
+     "time": "30 min",
+     "text": "Fix every shape/output-size error.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d20t7"
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "date": "2026-11-08",
+   "hours": "8 h",
+   "title": "Representation learning and visual geometry",
+   "week": 3,
+   "tasks": [
+    {
+     "cat": "CV",
+     "time": "1.5 h",
+     "text": "Watch CS231n Lecture 5 (CNNs) and Lecture 12 (Visualizing and Understanding) from the [CS231n playlist](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv), skipping sections you already know.",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "CS231n (2017) playlist",
+       "url": "https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv"
+      },
+      {
+       "kind": "web",
+       "label": "CS231n schedule & slides",
+       "url": "https://cs231n.stanford.edu/2025/schedule.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d21t1"
+    },
+    {
+     "cat": "Representation learning",
+     "time": "1 h",
+     "text": "Explain learned features/embeddings, early vs late CNN features, transfer learning, fine-tuning and why a representation can help classification.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §14.2 Fine-Tuning",
+       "file": "d2l-en.pdf",
+       "page": 640,
+       "online": "https://d2l.ai/chapter_computer-vision/fine-tuning.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §14 Computer Vision",
+       "file": "d2l-en.pdf",
+       "page": 632,
+       "online": "https://d2l.ai/chapter_computer-vision/index.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d21t2"
+    },
+    {
+     "cat": "Visual geometry",
+     "time": "1.5 h",
+     "text": "Learn the core basics: image coordinates vs world/camera coordinates, pinhole camera model, projection, homography/2D transforms, and what camera calibration estimates. Use the [targeted video search](https://www.youtube.com/results?search_query=computer+vision+pinhole+camera+model+projective+geometry+lecture) only to fill gaps.",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "YouTube: pinhole camera & projective geometry",
+       "url": "https://www.youtube.com/results?search_query=computer+vision+pinhole+camera+model+projective+geometry+lecture"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d21t3"
+    },
+    {
+     "cat": "CV practice",
+     "time": "1.5 h",
+     "text": "Answer 8 short questions: convolution/pooling output size, RGB tensor shape, affine vs projective transformation, role of camera intrinsics/extrinsics, transfer learning and representation visualization.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d21t4"
+    },
+    {
+     "cat": "Mixed set",
+     "time": "1 h",
+     "text": "5 math + 5 ML/CV questions, plus a 30-minute LeetCode retest: choose two from [Group Anagrams #49](https://leetcode.com/problems/group-anagrams/), [Product of Array Except Self #238](https://leetcode.com/problems/product-of-array-except-self/), [Top K Frequent Elements #347](https://leetcode.com/problems/top-k-frequent-elements/), [Reverse Linked List #206](https://leetcode.com/problems/reverse-linked-list/), or [Binary Search #704](https://leetcode.com/problems/binary-search/). Pick one previously missed and one not yet attempted.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 49,
+       "title": "Group Anagrams",
+       "url": "https://leetcode.com/problems/group-anagrams/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 238,
+       "title": "Product of Array Except Self",
+       "url": "https://leetcode.com/problems/product-of-array-except-self/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 347,
+       "title": "Top K Frequent Elements",
+       "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 206,
+       "title": "Reverse Linked List",
+       "url": "https://leetcode.com/problems/reverse-linked-list/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 704,
+       "title": "Binary Search",
+       "url": "https://leetcode.com/problems/binary-search/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "overleaf",
+     "id": "d21t5"
+    },
+    {
+     "cat": "Review",
+     "time": "1 h",
+     "text": "Mark and add the CV-specific misses to the error log.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d21t6"
+    },
+    {
+     "cat": "Weekly check",
+     "time": "30 min",
+     "text": "Rank weakest topics across the whole syllabus.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d21t7"
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "date": "2026-11-09",
+   "hours": "2.5 h",
+   "title": "Linear algebra/calculus/probability sweep",
+   "week": 4,
+   "tasks": [
+    {
+     "cat": "Math",
+     "time": "70 min",
+     "text": "9 questions: matrix multiplication/rank, eigenvector interpretation, gradient/chain rule, gradient-descent update, conditional probability/Bayes, expectation/variance, normal distribution and covariance.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML Ch 2 Exercises",
+       "file": "mml-book.pdf",
+       "page": 70,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=70",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%202%20Exercises%20-%20PDF.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 4 Exercises",
+       "file": "mml-book.pdf",
+       "page": 143,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=143",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%204%20Exercises%20-%20PDF.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 5 Exercises",
+       "file": "mml-book.pdf",
+       "page": 176,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=176",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%205%20Exercises%20-%20PDF.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 6 Exercises",
+       "file": "mml-book.pdf",
+       "page": 228,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=228",
+       "solution": "https://github.com/ilmoi/MML-Book/blob/master/end%20of%20chapter%20exercises/Chapter%206%20Exercises%20-%20PDF.pdf"
+      },
+      {
+       "kind": "book",
+       "label": "MIT 18.05 PSet 5 — joint distributions, covariance & correlation",
+       "file": "statprob-problemset/mit18_05_s22_pset05.pdf",
+       "page": 1,
+       "online": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset05.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset05_sol.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d22t1"
+    },
+    {
+     "cat": "LeetCode",
+     "time": "35 min",
+     "text": "Choose two previously attempted problems from [Valid Anagram #242](https://leetcode.com/problems/valid-anagram/), [Valid Parentheses #20](https://leetcode.com/problems/valid-parentheses/), [Reverse Linked List #206](https://leetcode.com/problems/reverse-linked-list/), and [Binary Search #704](https://leetcode.com/problems/binary-search/). Re-solve from a blank editor, then state the invariant and time/space complexity.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 242,
+       "title": "Valid Anagram",
+       "url": "https://leetcode.com/problems/valid-anagram/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 20,
+       "title": "Valid Parentheses",
+       "url": "https://leetcode.com/problems/valid-parentheses/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 206,
+       "title": "Reverse Linked List",
+       "url": "https://leetcode.com/problems/reverse-linked-list/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 704,
+       "title": "Binary Search",
+       "url": "https://leetcode.com/problems/binary-search/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d22t2"
+    },
+    {
+     "cat": "ML",
+     "time": "25 min",
+     "text": "Explain what matrix operations and gradients are doing in linear regression, PCA and an MLP.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML Ch 9 Linear Regression",
+       "file": "mml-book.pdf",
+       "page": 295,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=295"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 10 PCA",
+       "file": "mml-book.pdf",
+       "page": 323,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=323"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §5.1 Multilayer Perceptrons",
+       "file": "d2l-en.pdf",
+       "page": 207,
+       "online": "https://d2l.ai/chapter_multilayer-perceptrons/mlp.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d22t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "Use MML or the matching Coursera module only for missed principles.",
+     "resources": [
+      {
+       "kind": "course",
+       "label": "Coursera: Intuitive Introduction to Probability",
+       "url": "https://www.coursera.org/learn/introductiontoprobability"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d22t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d22t5"
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "date": "2026-11-10",
+   "hours": "2.5 h",
+   "title": "Regression/classification and evaluation",
+   "week": 4,
+   "tasks": [
+    {
+     "cat": "ML",
+     "time": "60 min",
+     "text": "8 questions on linear regression, logistic/softmax classification, loss functions, regularization, overfitting, cross-validation and metric choice.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "ISLR Ch 3 Exercises",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 135,
+       "online": "https://www.statlearning.com/"
+      },
+      {
+       "kind": "book",
+       "label": "ISLR Ch 4 Exercises",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 183,
+       "online": "https://www.statlearning.com/"
+      },
+      {
+       "kind": "book",
+       "label": "ISLR Ch 5 Exercises",
+       "file": "ISLR_First_Printing.pdf",
+       "page": 212,
+       "online": "https://www.statlearning.com/"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d23t1"
+    },
+    {
+     "cat": "Python",
+     "time": "40 min",
+     "text": "Implement a small train/validation split and compute a confusion matrix, precision, recall and F1 from predictions.",
+     "resources": [],
+     "problems": [],
+     "workspace": "notebook",
+     "id": "d23t2"
+    },
+    {
+     "cat": "Math",
+     "time": "30 min",
+     "text": "Compute MSE, sigmoid/softmax probabilities, cross-entropy for a tiny example and a one-step parameter update.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §3.1 Linear Regression",
+       "file": "d2l-en.pdf",
+       "page": 122,
+       "online": "https://d2l.ai/chapter_linear-regression/linear-regression.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §4.1 Softmax Regression",
+       "file": "d2l-en.pdf",
+       "page": 165,
+       "online": "https://d2l.ai/chapter_linear-classification/softmax-regression.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d23t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "Use StatQuest or D2L only for missed concepts.",
+     "resources": [
+      {
+       "kind": "web",
+       "label": "StatQuest video index",
+       "url": "https://statquest.org/video_index.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d23t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d23t5"
+    }
+   ]
+  },
+  {
+   "n": 24,
+   "date": "2026-11-11",
+   "hours": "2.5 h",
+   "title": "Neural networks, backprop and optimization",
+   "week": 4,
+   "tasks": [
+    {
+     "cat": "Math",
+     "time": "50 min",
+     "text": "Chain rule and derivative questions, including a simple computational graph.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §5.3 Forward Propagation, Backward Propagation, and Computational Graphs",
+       "file": "d2l-en.pdf",
+       "page": 219,
+       "online": "https://d2l.ai/chapter_multilayer-perceptrons/backprop.html"
+      },
+      {
+       "kind": "book",
+       "label": "MML §5.6",
+       "file": "mml-book.pdf",
+       "page": 165,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=165"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d24t1"
+    },
+    {
+     "cat": "ML",
+     "time": "55 min",
+     "text": "Forward pass, loss, backprop direction, activation functions, learning rate, SGD vs Adam, regularization and initialization. Do not aim to prove advanced results; aim for correct reasoning and calculations.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §5.1 Multilayer Perceptrons",
+       "file": "d2l-en.pdf",
+       "page": 207,
+       "online": "https://d2l.ai/chapter_multilayer-perceptrons/mlp.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §5.4 Numerical Stability and Initialization",
+       "file": "d2l-en.pdf",
+       "page": 224,
+       "online": "https://d2l.ai/chapter_multilayer-perceptrons/numerical-stability-and-init.html"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §12.10 Adam",
+       "file": "d2l-en.pdf",
+       "page": 572,
+       "online": "https://d2l.ai/chapter_optimization/adam.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d24t2"
+    },
+    {
+     "cat": "Programming",
+     "time": "25 min",
+     "text": "Debug a deliberately flawed gradient-descent loop (wrong sign, wrong update order or mismatched shapes).",
+     "resources": [],
+     "problems": [],
+     "workspace": "notebook",
+     "id": "d24t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "Replay only the needed portion of 3Blue1Brown/D2L.",
+     "resources": [
+      {
+       "kind": "video",
+       "label": "3B1B — Backpropagation Calculus",
+       "url": "https://www.youtube.com/watch?v=tIeHLnjs5U8"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d24t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d24t5"
+    }
+   ]
+  },
+  {
+   "n": 25,
+   "date": "2026-11-12",
+   "hours": "2.5 h",
+   "title": "PCA/clustering/CNN/CV sweep",
+   "week": 4,
+   "tasks": [
+    {
+     "cat": "Math",
+     "time": "35 min",
+     "text": "Explain eigenvectors/SVD in PCA and calculate a basic convolution output dimension.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML §4.5",
+       "file": "mml-book.pdf",
+       "page": 125,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=125"
+      },
+      {
+       "kind": "book",
+       "label": "MML §10.4",
+       "file": "mml-book.pdf",
+       "page": 339,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=339"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §7.3 Padding and Stride",
+       "file": "d2l-en.pdf",
+       "page": 287,
+       "online": "https://d2l.ai/chapter_convolutional-neural-networks/padding-and-strides.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d25t1"
+    },
+    {
+     "cat": "ML",
+     "time": "55 min",
+     "text": "Compare PCA, k-means, GMM, SVM, neural networks and CNNs. State purpose, inputs, core assumptions/objective and common failure modes.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "MML Ch 10 PCA",
+       "file": "mml-book.pdf",
+       "page": 323,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=323"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 11 Gaussian Mixture Models",
+       "file": "mml-book.pdf",
+       "page": 354,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=354"
+      },
+      {
+       "kind": "book",
+       "label": "MML Ch 12 SVM Classification",
+       "file": "mml-book.pdf",
+       "page": 376,
+       "online": "https://mml-book.github.io/book/mml-book.pdf#page=376"
+      },
+      {
+       "kind": "book",
+       "label": "D2L §7 Convolutional Neural Networks",
+       "file": "d2l-en.pdf",
+       "page": 273,
+       "online": "https://d2l.ai/chapter_convolutional-neural-networks/index.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d25t2"
+    },
+    {
+     "cat": "CV",
+     "time": "35 min",
+     "text": "Review basic image processing, learned representations, camera projection and homography at a definition/application level.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "D2L §14.2 Fine-Tuning",
+       "file": "d2l-en.pdf",
+       "page": 640,
+       "online": "https://d2l.ai/chapter_computer-vision/fine-tuning.html"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d25t3"
+    },
+    {
+     "cat": "Practice",
+     "time": "20 min",
+     "text": "Solve 5 short mixed questions.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d25t4"
+    },
+    {
+     "cat": "Repair",
+     "time": "15 min",
+     "text": "Target the weakest one of these concepts.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "none",
+     "id": "d25t5"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d25t6"
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "date": "2026-11-13",
+   "hours": "2.5 h",
+   "title": "Programming sprint",
+   "week": 4,
+   "tasks": [
+    {
+     "cat": "Timed LeetCode sprint",
+     "time": "70 min",
+     "text": "Solve 3–4 problems without help, selecting from [Top K Frequent Elements #347](https://leetcode.com/problems/top-k-frequent-elements/) (hash map/heap), [3Sum #15](https://leetcode.com/problems/3sum/) (sorting/two pointers), [Reverse Linked List #206](https://leetcode.com/problems/reverse-linked-list/) (iteration/recursion), and [Min Stack #155](https://leetcode.com/problems/min-stack/) (class/state/stack). Aim for one easy warm-up and two mediums; if stuck for 20 minutes, take one hint, close it, and finish independently.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 347,
+       "title": "Top K Frequent Elements",
+       "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 15,
+       "title": "3Sum",
+       "url": "https://leetcode.com/problems/3sum/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 206,
+       "title": "Reverse Linked List",
+       "url": "https://leetcode.com/problems/reverse-linked-list/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 155,
+       "title": "Min Stack",
+       "url": "https://leetcode.com/problems/min-stack/",
+       "difficulty": "Medium"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d26t1"
+    },
+    {
+     "cat": "Control flow / logic",
+     "time": "30 min",
+     "text": "Trace conditionals, boolean precedence, loops, early returns and edge cases.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "Think Python Ch 5 Conditionals and recursion",
+       "file": "thinkpython2.pdf",
+       "page": 61,
+       "online": "https://greenteapress.com/thinkpython2/thinkpython2.pdf#page=61"
+      },
+      {
+       "kind": "book",
+       "label": "Think Python Ch 7 Iteration",
+       "file": "thinkpython2.pdf",
+       "page": 85,
+       "online": "https://greenteapress.com/thinkpython2/thinkpython2.pdf#page=85"
+      }
+     ],
+     "problems": [],
+     "workspace": "notebook",
+     "id": "d26t2"
+    },
+    {
+     "cat": "Algorithms",
+     "time": "25 min",
+     "text": "State time complexity and explain why for each solution.",
+     "resources": [
+      {
+       "kind": "book",
+       "label": "Think Python Appendix B Analysis of Algorithms",
+       "file": "thinkpython2.pdf",
+       "page": 223,
+       "online": "https://greenteapress.com/thinkpython2/thinkpython2.pdf#page=223"
+      }
+     ],
+     "problems": [],
+     "workspace": "notebook",
+     "id": "d26t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "20 min",
+     "text": "Read only the relevant LeetCode hint/editorial section for a repeated pattern, close it, and re-solve the problem from scratch. Look up Python syntax only when it blocks implementation.",
+     "resources": [],
+     "problems": [],
+     "workspace": "leetcode",
+     "id": "d26t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Log today's misses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d26t5"
+    }
+   ]
+  },
+  {
+   "n": 27,
+   "date": "2026-11-14",
+   "hours": "9 h",
+   "title": "Mock exam 1",
+   "week": 4,
+   "tasks": [
+    {
+     "cat": "Mock",
+     "time": "3 h",
+     "text": "Closed-book, no AI, no videos, no notes. Suggested split: 60 min math; 60 min programming/algorithms using 2–3 unseen or previously missed LeetCode problems (mix one easy with medium-level array/hash-map, stack, recursion, linked-list, or binary-search patterns); 60 min ML. Include 20–30 min of CV questions inside the ML block.",
+     "resources": [
+      {
+       "kind": "web",
+       "label": "MIT 18.05 Practice Final",
+       "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_prac_exam_final.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_prac_exam_final_sol.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d27t1"
+    },
+    {
+     "cat": "Break",
+     "time": "30 min",
+     "text": "Step away from the screen.",
+     "resources": [],
+     "problems": [],
+     "workspace": "none",
+     "id": "d27t2"
+    },
+    {
+     "cat": "Mark",
+     "time": "1.5 h",
+     "text": "Use solutions/resources only after attempting every question. Mark wrong answers and lucky guesses separately.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d27t3"
+    },
+    {
+     "cat": "Repair",
+     "time": "2 h",
+     "text": "Select the 3 weakest subtopics and do new questions, not just reread explanations.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d27t4"
+    },
+    {
+     "cat": "Re-solve",
+     "time": "1 h",
+     "text": "Redo missed questions from a blank page/file.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d27t5"
+    },
+    {
+     "cat": "Log",
+     "time": "30 min",
+     "text": "Rank errors by severity and likelihood of appearing again.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d27t6"
+    },
+    {
+     "cat": "Cool-down",
+     "time": "30 min",
+     "text": "Summarize only the 5 highest-yield corrections.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d27t7"
+    }
+   ]
+  },
+  {
+   "n": 28,
+   "date": "2026-11-15",
+   "hours": "8 h",
+   "title": "Mock exam 2 and error repair",
+   "week": 4,
+   "tasks": [
+    {
+     "cat": "Mock",
+     "time": "2.5–3 h",
+     "text": "A second mixed set with different questions. Make it slightly harder by including a few derivation and edge-case questions.",
+     "resources": [
+      {
+       "kind": "web",
+       "label": "MIT 18.05 Final Exam",
+       "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_exam_final.pdf",
+       "solution": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_exam_final_sol.pdf"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d28t1"
+    },
+    {
+     "cat": "Mark",
+     "time": "1.5 h",
+     "text": "Calculate topic-level accuracy and identify repeated errors.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d28t2"
+    },
+    {
+     "cat": "Repair",
+     "time": "2 h",
+     "text": "If an error repeats, go back to a short reference section and then solve 2 similar problems. Don't rewatch an entire playlist.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d28t3"
+    },
+    {
+     "cat": "LeetCode sprint",
+     "time": "45 min",
+     "text": "Redo one hash-map problem ([Top K Frequent Elements #347](https://leetcode.com/problems/top-k-frequent-elements/) or [Group Anagrams #49](https://leetcode.com/problems/group-anagrams/)), one recursion/linked-list problem ([Reverse Linked List #206](https://leetcode.com/problems/reverse-linked-list/)), and one binary-search problem ([Search Insert Position #35](https://leetcode.com/problems/search-insert-position/)). Prioritize problems you previously missed.",
+     "resources": [],
+     "problems": [
+      {
+       "id": 347,
+       "title": "Top K Frequent Elements",
+       "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 49,
+       "title": "Group Anagrams",
+       "url": "https://leetcode.com/problems/group-anagrams/",
+       "difficulty": "Medium"
+      },
+      {
+       "id": 206,
+       "title": "Reverse Linked List",
+       "url": "https://leetcode.com/problems/reverse-linked-list/",
+       "difficulty": "Easy"
+      },
+      {
+       "id": 35,
+       "title": "Search Insert Position",
+       "url": "https://leetcode.com/problems/search-insert-position/",
+       "difficulty": "Easy"
+      }
+     ],
+     "workspace": "leetcode",
+     "id": "d28t4"
+    },
+    {
+     "cat": "ML/CV sprint",
+     "time": "45 min",
+     "text": "Redo a gradient/MLP problem, one PCA/clustering problem and one CNN/geometry question.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d28t5"
+    },
+    {
+     "cat": "Formula recall",
+     "time": "30 min",
+     "text": "Write key equations and definitions from memory.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d28t6"
+    }
+   ]
+  },
+  {
+   "n": 29,
+   "date": "2026-11-16",
+   "hours": "2.5 h",
+   "title": "Repair only the top weaknesses",
+   "week": 4,
+   "tasks": [
+    {
+     "cat": "Weak area 1",
+     "time": "45 min",
+     "text": "Solve 3 fresh questions.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d29t1"
+    },
+    {
+     "cat": "Weak area 2",
+     "time": "45 min",
+     "text": "Solve 3 fresh questions.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d29t2"
+    },
+    {
+     "cat": "Weak area 3",
+     "time": "35 min",
+     "text": "Solve 2 fresh questions or one coding problem.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d29t3"
+    },
+    {
+     "cat": "Formula/logic sheet",
+     "time": "20 min",
+     "text": "Consolidate formulas, common Python traps, algorithm complexities and ML comparisons.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d29t4"
+    },
+    {
+     "cat": "Log",
+     "time": "5 min",
+     "text": "Decide what not to study again unless it appears on the error list.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d29t5"
+    }
+   ]
+  },
+  {
+   "n": 30,
+   "date": "2026-11-17",
+   "hours": "2–2.5 h",
+   "title": "Final light review",
+   "week": 4,
+   "tasks": [
+    {
+     "cat": "Warm-up",
+     "time": "30 min",
+     "text": "Closed-book recall: matrix operations, derivatives/chain rule, Bayes, expectation/variance, gradient descent, loss functions, classification metrics, PCA, k-means and CNN dimensions.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d30t1"
+    },
+    {
+     "cat": "Mini-test",
+     "time": "45 min",
+     "text": "12 mixed questions under time pressure. Stop when time expires.",
+     "resources": [],
+     "problems": [],
+     "workspace": "overleaf",
+     "id": "d30t2"
+    },
+    {
+     "cat": "Mark",
+     "time": "25 min",
+     "text": "Review only the misses and any lucky guesses.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d30t3"
+    },
+    {
+     "cat": "LeetCode",
+     "time": "20 min",
+     "text": "Re-solve one previously missed easy problem without notes, then explain its edge cases and time/space complexity aloud. Do not start a new problem today.",
+     "resources": [],
+     "problems": [],
+     "workspace": "leetcode",
+     "id": "d30t4"
+    },
+    {
+     "cat": "Final review",
+     "time": "10 min",
+     "text": "Review the formula sheet and error log. No new topic and no long video today.",
+     "resources": [
+      {
+       "kind": "app",
+       "label": "Open Error Checks",
+       "url": "#/errors"
+      }
+     ],
+     "problems": [],
+     "workspace": "errors",
+     "id": "d30t5"
+    }
+   ]
+  }
+ ]
+}

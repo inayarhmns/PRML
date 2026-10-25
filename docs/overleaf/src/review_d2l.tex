@@ -1,0 +1,43 @@
+
+
+
+
+regression vs classification, train/validation/test, loss vs metric, gradient descent, PCA, clustering and neural-network layers. 
+
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+\subsection{Regression vs classification}
+
+Regression and classification are different tasks for prediction in machine learning. Classification predicts classes from inputs that have been processed into features. Clasification can be binary (2 classes) or multinomial (more than 2 classes). Regression predicts number from inputs that have been processed into features. 
+
+\subsection{train/validation/test}
+These are the split of data that are used in machine learning. Train are the data for training the model, where the features are being learned. Training data is usually in higher proportion compared to the other two. Validation are the set of data used for validating the training. Every epoch of training, the validation data is used to validate training. Test data is used for evaluating the model, to evaluate the features that have been learned. 
+
+\subsection{loss vs metric}
+Loss measures how far the predicted output is from the actual output from ground truth data. Metric is the tool to measure the performance of a model given some test data.  
+
+\subsection{gradient descent}
+gradient descent is the technique that is used to train differentiable models. Gradient descent minimizing the negative log likelihood of the derivative of the loss function wrt the weights. Gradient descent assumes that by minimizing the negative log likelihood, the loss derivative will reach the local minima. 
+\subsection{PCA}
+PCA is a dimensionality reduction method to find new sets of features from high dimensions to lower dimensions. 
+
+
+\subsection{clustering and neural-network layers}
+Clustering is a non-supervised method to train model by grouping similar features together and push dissimilar features apart. 
+Neural network layers contains of set of neurons that we can call as perceptron. Each layer can contain different sets of functions, e.g. a linear layer would be,
+\begin{equation}
+    f(x) = wx + b
+\end{equation}
+w is weight, where it is updated by the gradient descent. x is input, and b is bias to reduce overfitting the weights.
+
+There can also be a nonlinear \textit{activation} to introduce nonlinearity so that the model can predict nonlinearly, e.g. RELU
+\begin{equation}
+    f(x) = max(0, x)
+\end{equation}
+
+
+
+

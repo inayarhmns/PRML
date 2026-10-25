@@ -1,0 +1,754 @@
+{
+"1": [
+41,
+"Introduction"
+],
+"1.1": [
+42,
+"A Motivating Example"
+],
+"1.2": [
+44,
+"Key Components"
+],
+"1.3": [
+47,
+"Kinds of Machine Learning Problems"
+],
+"1.4": [
+60,
+"Roots"
+],
+"1.5": [
+62,
+"The Road to Deep Learning"
+],
+"1.6": [
+65,
+"Success Stories"
+],
+"1.7": [
+67,
+"The Essence of Deep Learning"
+],
+"1.8": [
+69,
+"Summary"
+],
+"1.9": [
+69,
+"Exercises"
+],
+"2": [
+70,
+"Preliminaries"
+],
+"2.1": [
+70,
+"Data Manipulation"
+],
+"2.2": [
+78,
+"Data Preprocessing"
+],
+"2.3": [
+81,
+"Linear Algebra"
+],
+"2.4": [
+94,
+"Calculus"
+],
+"2.5": [
+99,
+"Automatic Differentiation"
+],
+"2.6": [
+105,
+"Probability and Statistics"
+],
+"2.7": [
+118,
+"Documentation"
+],
+"3": [
+122,
+"Linear Neural Networks for Regression"
+],
+"3.1": [
+122,
+"Linear Regression"
+],
+"3.2": [
+133,
+"Object-Oriented Design for Implementation"
+],
+"3.3": [
+139,
+"Synthetic Regression Data"
+],
+"3.4": [
+142,
+"Linear Regression Implementation from Scratch"
+],
+"3.5": [
+148,
+"Concise Implementation of Linear Regression"
+],
+"3.6": [
+152,
+"Generalization"
+],
+"3.7": [
+158,
+"Weight Decay"
+],
+"4": [
+165,
+"Linear Neural Networks for Classification"
+],
+"4.1": [
+165,
+"Softmax Regression"
+],
+"4.2": [
+173,
+"The Image Classification Dataset"
+],
+"4.3": [
+177,
+"The Base Classification Model"
+],
+"4.4": [
+179,
+"Softmax Regression Implementation from Scratch"
+],
+"4.5": [
+184,
+"Concise Implementation of Softmax Regression"
+],
+"4.6": [
+187,
+"Generalization in Classification"
+],
+"4.7": [
+194,
+"Environment and Distribution Shift"
+],
+"5": [
+207,
+"Multilayer Perceptrons"
+],
+"5.1": [
+207,
+"Multilayer Perceptrons"
+],
+"5.2": [
+215,
+"Implementation of Multilayer Perceptrons"
+],
+"5.3": [
+219,
+"Forward Propagation, Backward Propagation, and Computational Graphs"
+],
+"5.4": [
+224,
+"Numerical Stability and Initialization"
+],
+"5.5": [
+229,
+"Generalization in Deep Learning"
+],
+"5.6": [
+234,
+"Dropout"
+],
+"5.7": [
+239,
+"Predicting House Prices on Kaggle"
+],
+"6": [
+247,
+"Builders' Guide"
+],
+"6.1": [
+247,
+"Layers and Modules"
+],
+"6.2": [
+253,
+"Parameter Management"
+],
+"6.3": [
+256,
+"Parameter Initialization"
+],
+"6.4": [
+259,
+"Lazy Initialization"
+],
+"6.5": [
+261,
+"Custom Layers"
+],
+"6.6": [
+263,
+"File I/O"
+],
+"6.7": [
+266,
+"GPUs"
+],
+"7": [
+273,
+"Convolutional Neural Networks"
+],
+"7.1": [
+274,
+"From Fully Connected Layers to Convolutions"
+],
+"7.2": [
+280,
+"Convolutions for Images"
+],
+"7.3": [
+287,
+"Padding and Stride"
+],
+"7.4": [
+292,
+"Multiple Input and Multiple Output Channels"
+],
+"7.5": [
+297,
+"Pooling"
+],
+"7.6": [
+302,
+"Convolutional Neural Networks (LeNet)"
+],
+"8": [
+308,
+"Modern Convolutional Neural Networks"
+],
+"8.1": [
+309,
+"Deep Convolutional Neural Networks (AlexNet)"
+],
+"8.2": [
+318,
+"Networks Using Blocks (VGG)"
+],
+"8.3": [
+323,
+"Network in Network (NiN)"
+],
+"8.4": [
+327,
+"Multi-Branch Networks (GoogLeNet)"
+],
+"8.5": [
+332,
+"Batch Normalization"
+],
+"8.6": [
+342,
+"Residual Networks (ResNet) and ResNeXt"
+],
+"8.7": [
+352,
+"Densely Connected Networks (DenseNet)"
+],
+"8.8": [
+356,
+"Designing Convolution Network Architectures"
+],
+"9": [
+365,
+"Recurrent Neural Networks"
+],
+"9.1": [
+367,
+"Working with Sequences"
+],
+"9.2": [
+376,
+"Converting Raw Text into Sequence Data"
+],
+"9.3": [
+382,
+"Language Models"
+],
+"9.4": [
+388,
+"Recurrent Neural Networks"
+],
+"9.5": [
+392,
+"Recurrent Neural Network Implementation from Scratch"
+],
+"9.6": [
+400,
+"Concise Implementation of Recurrent Neural Networks"
+],
+"9.7": [
+402,
+"Backpropagation Through Time"
+],
+"10": [
+409,
+"Modern Recurrent Neural Networks"
+],
+"10.1": [
+409,
+"Long Short-Term Memory (LSTM)"
+],
+"10.2": [
+416,
+"Gated Recurrent Units (GRU)"
+],
+"10.3": [
+421,
+"Deep Recurrent Neural Networks"
+],
+"10.4": [
+425,
+"Bidirectional Recurrent Neural Networks"
+],
+"10.5": [
+428,
+"Machine Translation and the Dataset"
+],
+"10.6": [
+434,
+"The Encoder-Decoder Architecture"
+],
+"10.7": [
+436,
+"Sequence-to-Sequence Learning for Machine Translation"
+],
+"10.8": [
+445,
+"Beam Search"
+],
+"11": [
+449,
+"Attention Mechanisms and Transformers"
+],
+"11.1": [
+451,
+"Queries, Keys, and Values"
+],
+"11.2": [
+455,
+"Attention Pooling by Similarity"
+],
+"11.3": [
+460,
+"Attention Scoring Functions"
+],
+"11.4": [
+466,
+"The Bahdanau Attention Mechanism"
+],
+"11.5": [
+472,
+"Multi-Head Attention"
+],
+"11.6": [
+475,
+"Self-Attention and Positional Encoding"
+],
+"11.7": [
+480,
+"The Transformer Architecture"
+],
+"11.8": [
+491,
+"Transformers for Vision"
+],
+"11.9": [
+496,
+"Large-Scale Pretraining with Transformers"
+],
+"12": [
+508,
+"Optimization Algorithms"
+],
+"12.1": [
+508,
+"Optimization and Deep Learning"
+],
+"12.2": [
+513,
+"Convexity"
+],
+"12.3": [
+522,
+"Gradient Descent"
+],
+"12.4": [
+532,
+"Stochastic Gradient Descent"
+],
+"12.5": [
+539,
+"Minibatch Stochastic Gradient Descent"
+],
+"12.6": [
+550,
+"Momentum"
+],
+"12.7": [
+559,
+"Adagrad"
+],
+"12.8": [
+565,
+"RMSProp"
+],
+"12.9": [
+569,
+"Adadelta"
+],
+"12.10": [
+572,
+"Adam"
+],
+"12.11": [
+576,
+"Learning Rate Scheduling"
+],
+"13": [
+587,
+"Computational Performance"
+],
+"13.1": [
+587,
+"Compilers and Interpreters"
+],
+"13.2": [
+592,
+"Asynchronous Computation"
+],
+"13.3": [
+595,
+"Automatic Parallelism"
+],
+"13.4": [
+599,
+"Hardware"
+],
+"13.5": [
+612,
+"Training on Multiple GPUs"
+],
+"13.6": [
+620,
+"Concise Implementation for Multiple GPUs"
+],
+"13.7": [
+624,
+"Parameter Servers"
+],
+"14": [
+632,
+"Computer Vision"
+],
+"14.1": [
+632,
+"Image Augmentation"
+],
+"14.2": [
+640,
+"Fine-Tuning"
+],
+"14.3": [
+646,
+"Object Detection and Bounding Boxes"
+],
+"14.4": [
+649,
+"Anchor Boxes"
+],
+"14.5": [
+663,
+"Multiscale Object Detection"
+],
+"14.6": [
+667,
+"The Object Detection Dataset"
+],
+"14.7": [
+670,
+"Single Shot Multibox Detection"
+],
+"14.8": [
+682,
+"Region-based CNNs (R-CNNs)"
+],
+"14.9": [
+687,
+"Semantic Segmentation and the Dataset"
+],
+"14.10": [
+694,
+"Transposed Convolution"
+],
+"14.11": [
+699,
+"Fully Convolutional Networks"
+],
+"14.12": [
+706,
+"Neural Style Transfer"
+],
+"14.13": [
+714,
+"Image Classification (CIFAR-10) on Kaggle"
+],
+"14.14": [
+722,
+"Dog Breed Identification (ImageNet Dogs) on Kaggle"
+],
+"15": [
+730,
+"Natural Language Processing: Pretraining"
+],
+"15.1": [
+730,
+"Word Embedding (word2vec)"
+],
+"15.2": [
+736,
+"Approximate Training"
+],
+"15.3": [
+739,
+"The Dataset for Pretraining Word Embeddings"
+],
+"15.4": [
+747,
+"Pretraining word2vec"
+],
+"15.5": [
+751,
+"Word Embedding with Global Vectors (GloVe)"
+],
+"15.6": [
+755,
+"Subword Embedding"
+],
+"15.7": [
+759,
+"Word Similarity and Analogy"
+],
+"15.8": [
+764,
+"Bidirectional Encoder Representations from Transformers (BERT)"
+],
+"15.9": [
+773,
+"The Dataset for Pretraining BERT"
+],
+"15.10": [
+779,
+"Pretraining BERT"
+],
+"16": [
+784,
+"Natural Language Processing: Applications"
+],
+"16.1": [
+785,
+"Sentiment Analysis and the Dataset"
+],
+"16.2": [
+788,
+"Sentiment Analysis: Using Recurrent Neural Networks"
+],
+"16.3": [
+792,
+"Sentiment Analysis: Using Convolutional Neural Networks"
+],
+"16.4": [
+798,
+"Natural Language Inference and the Dataset"
+],
+"16.5": [
+803,
+"Natural Language Inference: Using Attention"
+],
+"16.6": [
+810,
+"Fine-Tuning BERT for Sequence-Level and Token-Level Applications"
+],
+"16.7": [
+815,
+"Natural Language Inference: Fine-Tuning BERT"
+],
+"17": [
+821,
+"Reinforcement Learning"
+],
+"17.1": [
+822,
+"Markov Decision Process (MDP)"
+],
+"17.2": [
+825,
+"Value Iteration"
+],
+"17.3": [
+831,
+"Q-Learning"
+],
+"18": [
+837,
+"Gaussian Processes"
+],
+"18.1": [
+837,
+"Introduction to Gaussian Processes"
+],
+"18.2": [
+849,
+"Gaussian Process Priors"
+],
+"18.3": [
+855,
+"Gaussian Process Inference"
+],
+"19": [
+868,
+"Hyperparameter Optimization"
+],
+"19.1": [
+868,
+"What Is Hyperparameter Optimization?"
+],
+"19.2": [
+875,
+"Hyperparameter Optimization API"
+],
+"19.3": [
+882,
+"Asynchronous Random Search"
+],
+"19.4": [
+893,
+"Multi-Fidelity Hyperparameter Optimization"
+],
+"19.5": [
+906,
+"Asynchronous Successive Halving"
+],
+"20": [
+920,
+"Generative Adversarial Networks"
+],
+"20.1": [
+920,
+"Generative Adversarial Networks"
+],
+"20.2": [
+925,
+"Deep Convolutional Generative Adversarial Networks"
+],
+"21": [
+933,
+"Recommender Systems"
+],
+"21.1": [
+933,
+"Overview of Recommender Systems"
+],
+"22": [
+937,
+"Appendix AMathematics for Deep Learning"
+],
+"22.1": [
+938,
+"Geometry and Linear Algebraic Operations"
+],
+"22.2": [
+954,
+"Eigendecompositions"
+],
+"22.3": [
+963,
+"Single Variable Calculus"
+],
+"22.4": [
+975,
+"Multivariable Calculus"
+],
+"22.5": [
+991,
+"Integral Calculus"
+],
+"22.6": [
+1001,
+"Random Variables"
+],
+"22.7": [
+1019,
+"Maximum Likelihood"
+],
+"22.8": [
+1024,
+"Distributions"
+],
+"22.9": [
+1039,
+"Naive Bayes"
+],
+"22.10": [
+1047,
+"Statistics"
+],
+"22.11": [
+1059,
+"Information Theory"
+],
+"23": [
+1075,
+"Appendix BTools for Deep Learning"
+],
+"23.1": [
+1075,
+"Using Jupyter Notebooks"
+],
+"23.2": [
+1079,
+"Using Amazon SageMaker"
+],
+"23.3": [
+1083,
+"Using AWS EC2 Instances"
+],
+"23.4": [
+1091,
+"Using Google Colab"
+],
+"23.5": [
+1092,
+"Selecting Servers and GPUs"
+],
+"23.6": [
+1096,
+"Contributing to This Book"
+],
+"23.7": [
+1100,
+"Utility Functions and Classes"
+],
+"23.8": [
+1113,
+"The d2l API Document"
+],
+"24": [
+1129,
+"References"
+]
+}

@@ -1,0 +1,54 @@
+#!/bin/zsh
+# MML30 launcher.
+#   study          start the local helper (if needed) and open the app in Microsoft Edge
+#   study local    same, but open the helper-served copy (http://127.0.0.1:8765)
+#   study login    log in to Overleaf (overleaf-sync) and save the session for the helper
+#   study stop     stop the helper
+#   study app      install "MML30.app" in ~/Applications (Dock/Spotlight shortcut)
+set -e
+REPO="${0:A:h:h}"
+PORT="${MML_PORT:-8765}"
+SITE="https://inayarhmns.github.io/PRML/"
+CONFIG="$HOME/.config/mml-study"
+LOG="$HOME/.cache/mml-study/helper.log"
+OLS="${OLS:-$HOME/.local/bin/ols}"
+mkdir -p "$CONFIG" "${LOG:h}"
+
+running() { curl -s -o /dev/null --max-time 1 "http://127.0.0.1:$PORT/api/status"; }
+
+start_helper() {
+  if ! running; then
+    nohup /usr/bin/env python3 "$REPO/helper/server.py" >>"$LOG" 2>&1 &
+    for _ in {1..30}; do running && break; sleep 0.2; done
+  fi
+  running || { echo "Helper failed to start; see $LOG"; exit 1; }
+}
+
+open_edge() { open -a "Microsoft Edge" "$1"; }
+
+case "${1:-open}" in
+  open)
+    start_helper
+    open_edge "$SITE"
+    ;;
+  local)
+    start_helper
+    open_edge "http://127.0.0.1:$PORT/"
+    ;;
+  login)
+    cd "$CONFIG" && "$OLS" login --store-path .olauth
+    echo "Saved Overleaf session to $CONFIG/.olauth"
+    ;;
+  stop)
+    pkill -f "helper/server.py" && echo "Helper stopped." || echo "Helper was not running."
+    ;;
+  app)
+    APP="$HOME/Applications/MML30.app"
+    mkdir -p "$HOME/Applications"
+    osacompile -o "$APP" -e "do shell script \"/bin/zsh -lc '\\\"$REPO/bin/study\\\" open'\""
+    echo "Installed $APP. Drag it to the Dock; it opens the app in Edge."
+    ;;
+  *)
+    sed -n '2,8p' "$0"; exit 1
+    ;;
+esac

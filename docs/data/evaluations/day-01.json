@@ -1,0 +1,212 @@
+{
+ "day": 1,
+ "evaluated_at": "2026-10-25T11:16:09+07:00",
+ "overleaf_pulled_at": "2026-10-25T11:12:00+07:00",
+ "cost_usd": 1.255862,
+ "errors_added": 6,
+ "summary": "Only one of the two Day-1 tasks was attempted: the seven \"explain without notes\" ML concepts are written up in review_d2l.tex, but the entire closed-book math mini-set (3 matrix/vector, 3 derivative/chain-rule, 4 probability/statistics) is absent — 2_linalg.tex is a 0-byte file — and none of the 5 D2L Ch 3–5 questions were solved (notebooks/ch3.ipynb contains only a title cell). Of the concepts that were attempted, only regression vs classification is fully right; the gradient-descent answer is outright wrong, confusing the update rule w ← w − η∇L with \"minimizing the negative log likelihood of the derivative of the loss,\" which suggests the mechanics of optimization are not yet internalised. The other five answers are one-or-two-sentence definitions that name the right object but omit the discriminating property — what validation is actually *for*, why a loss must be differentiable while a metric need not be, that PCA maximises projected variance via eigenvectors of the covariance matrix — plus one hard error, that bias \"reduces overfitting\" (it is an intercept/offset term). The biggest gap is computational: the diagnostic produced zero evidence of ability to actually compute a matrix product, a chain-rule derivative, or a Bayes posterior under closed-book conditions.",
+ "score": {
+  "correct": 1,
+  "total": 22
+ },
+ "items": [
+  {
+   "task": "ML concepts",
+   "question": "Explain regression vs classification",
+   "verdict": "correct",
+   "feedback": "The essential distinction is stated correctly: classification predicts a discrete class label (binary or multiclass), regression predicts a continuous numeric value. Accepted. To make it stronger, add the consequence of that distinction: regression typically uses squared error and outputs a real number directly, classification outputs a probability vector via softmax/sigmoid and uses cross-entropy. Minor typo: 'Clasification'.",
+   "ground_truth": "Both are supervised learning. Regression: target y is continuous (y in R), model predicts E[Y|X=x], usual loss is squared error. Classification: target y is a categorical label from a finite set, model predicts P(Y=k|X=x), usual loss is cross-entropy; prediction is argmax over classes."
+  },
+  {
+   "task": "ML concepts",
+   "question": "Explain train / validation / test splits",
+   "verdict": "partial",
+   "feedback": "You correctly identify three disjoint splits and that train is the largest. But the defining purpose of validation is missed: it is for hyperparameter tuning, model selection and early stopping — i.e. decisions you make about the model — not merely 'validating the training each epoch'. And the critical rule about test is missing: it must be touched only once, at the very end, and never used to make any modelling decision, otherwise the generalisation estimate becomes optimistically biased. Also, training fits *parameters*; features are given (except in representation learning).",
+   "ground_truth": "Train: fit model parameters. Validation: estimate generalisation during development in order to choose hyperparameters / architecture / stopping point — every decision made on this set leaks into it, so its score is itself optimistically biased. Test: held out and used exactly once to report an unbiased estimate of generalisation. The three sets must be disjoint and drawn from the same distribution; with little data, use k-fold cross-validation in place of a fixed validation split."
+  },
+  {
+   "task": "ML concepts",
+   "question": "Explain loss vs metric",
+   "verdict": "partial",
+   "feedback": "'Loss measures how far the prediction is from ground truth' is right as far as it goes, and you gesture at metric = performance measure. What is missing is the property that actually separates them: the loss is the objective we optimise, so it must be differentiable (almost everywhere) and is often a surrogate for what we care about; the metric is what we actually care about and is frequently non-differentiable (accuracy, F1, AUC, BLEU), so it cannot be optimised by gradient descent. Also, loss is computed on train and validation too, not just the metric on test.",
+   "ground_truth": "Loss: the differentiable objective minimised during training, averaged over examples, e.g. MSE or cross-entropy; chosen for optimisability. Metric: the quantity used to judge the model for its purpose, e.g. accuracy, precision/recall, F1, AUC, RMSE; chosen for interpretability and need not be differentiable. Cross-entropy is a convex, differentiable surrogate for 0-1 accuracy, which has zero gradient almost everywhere. A model can improve on loss while the metric stagnates (and vice versa), which is why both are tracked."
+  },
+  {
+   "task": "ML concepts",
+   "question": "Explain gradient descent",
+   "verdict": "wrong",
+   "feedback": "This is the weakest answer and the one to rewrite first. Gradient descent does not 'minimize the negative log likelihood of the derivative of the loss function' — that phrase does not correspond to anything. GD minimises the loss itself, and the derivative is the *tool*, not the thing being minimised. NLL is merely one possible choice of loss (the one you get from maximum likelihood); GD applies to any differentiable loss. The update rule, the learning rate, and the iterative nature are all absent, and 'the loss derivative will reach the local minima' inverts the fact: at a local minimum the gradient reaches zero.",
+   "ground_truth": "Gradient descent iteratively minimises a differentiable loss L(w): repeat w <- w - eta * grad_w L(w), where eta is the learning rate. The gradient points in the direction of steepest increase, so stepping along its negative decreases L for sufficiently small eta. It converges to a stationary point where grad_w L = 0 — a global minimum if L is convex, otherwise only a local minimum or saddle. Variants: batch GD (full dataset per step), SGD (one example), minibatch SGD (the practical default). The loss may be the negative log likelihood, but that is a modelling choice, not part of GD."
+  },
+  {
+   "task": "ML concepts",
+   "question": "Explain PCA",
+   "verdict": "partial",
+   "feedback": "One sentence stating the goal (dimensionality reduction to new features) is true but contains no mechanism, so it does not demonstrate understanding. Missing: that the new features are orthogonal *linear* combinations of the originals; that the first component is chosen to maximise projected variance (equivalently to minimise squared reconstruction error); that the components are the top-k eigenvectors of the data covariance matrix (equivalently the right singular vectors of the centred data matrix); and that centring the data first is mandatory. Also worth naming: PCA is unsupervised, and how you choose k via the explained-variance ratio.",
+   "ground_truth": "PCA: centre the data X (subtract the column means), form the covariance matrix S = (1/n) X^T X, and take its eigenvectors b_1..b_D with eigenvalues lambda_1 >= ... >= lambda_D. The top k eigenvectors B_k span the k-dimensional subspace that maximises the variance of the projected data, which is equivalent to minimising the average squared reconstruction error ||x - B_k B_k^T x||^2. The code is z = B_k^T x, the reconstruction is x_hat = B_k z, and the fraction of variance retained is (sum of top k lambdas) / (sum of all lambdas). Equivalently computed from the SVD of the centred X. It is unsupervised and purely linear."
+  },
+  {
+   "task": "ML concepts",
+   "question": "Explain clustering",
+   "verdict": "partial",
+   "feedback": "'Unsupervised method that groups similar things together' is the right core. Two problems. First, you cluster *data points* (examples), not 'features' — grouping features is a different operation. Second, 'push dissimilar features apart' describes contrastive representation learning, not clustering: clustering assigns each point to a group, it does not apply a repulsive force. The answer would also be much stronger with one named algorithm and its objective.",
+   "ground_truth": "Clustering is unsupervised: given unlabelled examples x_1..x_n, partition them into groups so that points within a group are similar and points in different groups are not. k-means minimises the within-cluster sum of squares sum_i ||x_i - mu_{c(i)}||^2 by alternating (1) assign each point to its nearest centroid and (2) recompute each centroid as the mean of its assigned points; k must be chosen in advance and the result depends on initialisation. Other families: hierarchical/agglomerative (builds a dendrogram, no fixed k), DBSCAN (density-based, finds arbitrary shapes and labels outliers), Gaussian mixture models (soft/probabilistic assignment via EM)."
+  },
+  {
+   "task": "ML concepts",
+   "question": "Explain neural-network layers",
+   "verdict": "partial",
+   "feedback": "The structure is right — a linear/affine layer followed by a nonlinear activation, with weights updated by gradient descent, and ReLU = max(0,x) is correct, as is the reason for the activation. But 'b is bias to reduce overfitting the weights' is flatly wrong: the bias is an intercept/offset that lets the affine map shift away from the origin, and it has nothing to do with overfitting (that is what regularisation does — and the bias is usually *excluded* from weight decay). Write the layer in matrix form too: a layer maps a vector to a vector, so h = sigma(Wx + b) with W a matrix, not a scalar w. Worth adding: why the nonlinearity is non-optional — stacking affine layers without it collapses to a single affine layer.",
+   "ground_truth": "A fully connected (dense) layer computes h = sigma(Wx + b), where x in R^n, W in R^{m x n}, b in R^m, and sigma is an elementwise activation. W holds the learned weights; b is the bias/intercept, which translates the output so the function need not pass through the origin — it adds expressive power, it does not regularise. sigma introduces nonlinearity: without it, composing layers gives W2(W1x + b1) + b2 = Wx + b, a single affine map, so depth buys nothing. Common activations: ReLU max(0,x) (derivative 1 for x>0, 0 for x<0, undefined at 0), sigmoid, tanh. Both W and b are learned by gradient descent on the loss, with gradients supplied by backpropagation."
+  },
+  {
+   "task": "Math — matrix/vector",
+   "question": "Closed-book matrix/vector question 1 of 3 (e.g. MML Ex. 2.4c: compute [[1,1,0],[0,1,1],[1,0,1]] * [[1,2,3],[4,5,6],[7,8,9]])",
+   "verdict": "missing",
+   "feedback": "No answer submitted — 2_linalg.tex is an empty 0-byte file and no notebook contains matrix work. Attempt this before moving to Day 2: matrix multiplication by hand is a core skill.",
+   "ground_truth": "Row i of the product is the combination of rows of the right matrix selected by row i of the left matrix. Result = [[5,7,9],[11,13,15],[8,10,12]]. Check row 1: (1,1,0) picks rows 1+2 = (1,2,3)+(4,5,6) = (5,7,9). Row 2: (0,1,1) gives (4,5,6)+(7,8,9) = (11,13,15). Row 3: (1,0,1) gives (1,2,3)+(7,8,9) = (8,10,12). Also check conformability first: (3x3)(3x3) is valid; MML 2.4a is a trap — a 3x2 times a 3x3 is undefined because 2 != 3."
+  },
+  {
+   "task": "Math — matrix/vector",
+   "question": "Closed-book matrix/vector question 2 of 3 (e.g. MML Ex. 2.10a: are x1=(2,-1,3), x2=(1,1,-2), x3=(3,-3,8) linearly independent?)",
+   "verdict": "missing",
+   "feedback": "No answer submitted. Linear independence / rank is a staple topic; practise the Gaussian-elimination routine until it is automatic.",
+   "ground_truth": "Linearly dependent. Solve a*x1 + b*x2 = x3: from the first two coordinates, 2a + b = 3 and -a + b = -3, giving a = 2, b = -1; verify in the third coordinate, 3(2) - 2(-1) = 8, which matches. So x3 = 2*x1 - x2, i.e. 2*x1 - x2 - x3 = 0 is a nontrivial dependency. General method: stack the vectors as columns, row-reduce, and the set is independent iff rank equals the number of vectors (iff there is a pivot in every column)."
+  },
+  {
+   "task": "Math — matrix/vector",
+   "question": "Closed-book matrix/vector question 3 of 3 (e.g. MML Ex. 2.8a: invert A = [[2,3,4],[3,4,5],[4,5,6]] if possible)",
+   "verdict": "missing",
+   "feedback": "No answer submitted. Note that the useful instinct here is to check the determinant/rank before grinding through Gauss-Jordan.",
+   "ground_truth": "No inverse exists. det(A) = 2(4*6 - 5*5) - 3(3*6 - 5*4) + 4(3*5 - 4*4) = 2(-1) - 3(-2) + 4(-1) = -2 + 6 - 4 = 0, so A is singular. Structurally, row2 - row1 = row3 - row2 = (1,1,1), so row1 - 2*row2 + row3 = 0 and rank(A) = 2 < 3. A square matrix is invertible iff det != 0 iff full rank iff no zero eigenvalue iff its columns are linearly independent."
+  },
+  {
+   "task": "Math — derivative/chain rule",
+   "question": "Closed-book derivative question 1 of 3 (e.g. MML Ex. 5.1: f(x) = log(x^4) sin(x^3), find f'(x))",
+   "verdict": "missing",
+   "feedback": "No answer submitted. This one drills product rule and chain rule together, which is exactly the combination backpropagation requires.",
+   "ground_truth": "Product rule with chain rule on each factor. d/dx log(x^4) = 4x^3 / x^4 = 4/x (or note log(x^4) = 4 log x directly). d/dx sin(x^3) = 3x^2 cos(x^3). So f'(x) = (4/x) sin(x^3) + 3x^2 log(x^4) cos(x^3) = (4/x) sin(x^3) + 12 x^2 log(x) cos(x^3)."
+  },
+  {
+   "task": "Math — derivative/chain rule",
+   "question": "Closed-book derivative question 2 of 3 (e.g. MML Ex. 5.2: derivative of the logistic sigmoid f(x) = 1/(1+exp(-x)))",
+   "verdict": "missing",
+   "feedback": "No answer submitted. Memorise this result outright — it appears in every logistic-regression and backprop derivation.",
+   "ground_truth": "f'(x) = exp(-x) / (1 + exp(-x))^2 = f(x)(1 - f(x)). Derivation: write f = (1 + e^{-x})^{-1}, then f' = -(1 + e^{-x})^{-2} * (-e^{-x}) = e^{-x}/(1 + e^{-x})^2; split as [1/(1+e^{-x})] * [e^{-x}/(1+e^{-x})] = f(x) * (1 - f(x)). Maximum value 1/4 at x = 0."
+  },
+  {
+   "task": "Math — derivative/chain rule",
+   "question": "Closed-book derivative question 3 of 3 (e.g. MML Ex. 5.3: derivative of f(x) = exp(-(1/(2*sigma^2))(x-mu)^2))",
+   "verdict": "missing",
+   "feedback": "No answer submitted. This is the Gaussian kernel; the trick is that the derivative is the function itself times the derivative of the exponent.",
+   "ground_truth": "f'(x) = -((x - mu)/sigma^2) * exp(-(x - mu)^2/(2 sigma^2)) = -((x - mu)/sigma^2) f(x). Chain rule: with u(x) = -(x - mu)^2/(2 sigma^2), u'(x) = -(x - mu)/sigma^2, and f' = u' * e^u. Note f' = 0 only at x = mu (the mode), and f' has the opposite sign to (x - mu)."
+  },
+  {
+   "task": "Math — probability/statistics",
+   "question": "Closed-book probability question 1 of 4 (e.g. MML Ex. 6.1a: marginals p(x) and p(y) of the given 3x5 joint table)",
+   "verdict": "missing",
+   "feedback": "No answer submitted. Marginalisation by summing out a variable is the most basic probability manipulation on the syllabus.",
+   "ground_truth": "Marginalise by summing the joint over the other variable. p(x) = column sums = (0.16, 0.17, 0.11, 0.22, 0.34) for x1..x5. p(y) = row sums = (0.26, 0.47, 0.27) for y1..y3. Both sum to 1, which is the check to run every time."
+  },
+  {
+   "task": "Math — probability/statistics",
+   "question": "Closed-book probability question 2 of 4 (e.g. MML Ex. 6.1b: conditionals p(x|Y=y1) and p(y|X=x3))",
+   "verdict": "missing",
+   "feedback": "No answer submitted. Conditioning = slice the joint table, then renormalise by the marginal.",
+   "ground_truth": "p(x | Y=y1) = row y1 divided by p(y1)=0.26 = (0.01,0.02,0.03,0.1,0.1)/0.26 = (1/26, 2/26, 3/26, 10/26, 10/26) ~ (0.038, 0.077, 0.115, 0.385, 0.385). p(y | X=x3) = column x3 divided by p(x3)=0.11 = (0.03,0.05,0.03)/0.11 = (3/11, 5/11, 3/11) ~ (0.273, 0.455, 0.273). Rule: p(a|b) = p(a,b)/p(b); each conditional distribution must sum to 1."
+  },
+  {
+   "task": "Math — probability/statistics",
+   "question": "Closed-book probability question 3 of 4 (e.g. MML Ex. 6.4: biased coin picks bag 1 w.p. 0.6 (4 mangos, 2 apples) else bag 2 (4 mangos, 4 apples); given a mango, P(bag 2)?)",
+   "verdict": "missing",
+   "feedback": "No answer submitted. Bayes-theorem word problems of exactly this shape are very common — practise the prior / likelihood / evidence bookkeeping.",
+   "ground_truth": "P(B1)=0.6, P(B2)=0.4; P(mango|B1)=4/6=2/3, P(mango|B2)=4/8=1/2. Evidence: P(mango) = 0.6*(2/3) + 0.4*(1/2) = 0.4 + 0.2 = 0.6. Posterior: P(B2|mango) = P(mango|B2)P(B2)/P(mango) = 0.2/0.6 = 1/3 ~ 0.333 (and P(B1|mango) = 2/3). Sanity check: the posterior for bag 2 (1/3) is below its prior (0.4) because bag 2 is the mango-poorer bag."
+  },
+  {
+   "task": "Math — probability/statistics",
+   "question": "Closed-book probability question 4 of 4 (e.g. MML Ex. 6.6: prove Var[X] = E[X^2] - (E[X])^2)",
+   "verdict": "missing",
+   "feedback": "No answer submitted. The raw-score variance identity is a one-line proof worth being able to reproduce instantly, and it is the basis of the numerically convenient variance formula.",
+   "ground_truth": "Var[X] = E[(X - mu)^2] with mu = E[X]. Expand: E[X^2 - 2 mu X + mu^2] = E[X^2] - 2 mu E[X] + mu^2 (linearity of expectation, mu is a constant) = E[X^2] - 2 mu^2 + mu^2 = E[X^2] - mu^2. Hence Var[X] = E[X^2] - (E[X])^2 >= 0, which also proves E[X^2] >= (E[X])^2 (Jensen for the convex function t -> t^2)."
+  },
+  {
+   "task": "D2L Ch 3–5",
+   "question": "D2L question 1 of 5 (§3.1 exercise: given x_1..x_n in R, find the b minimising sum_i (x_i - b)^2, and relate the solution to the normal distribution)",
+   "verdict": "missing",
+   "feedback": "No answer submitted — notebooks/ch3.ipynb contains only a '# Chapter 3' markdown heading and one empty cell. This exercise is the cleanest demonstration that squared loss and the mean are the same idea.",
+   "ground_truth": "Differentiate L(b) = sum_i (x_i - b)^2: dL/db = -2 sum_i (x_i - b) = 0, so n*b = sum_i x_i and b* = (1/n) sum_i x_i, the sample mean. d2L/db2 = 2n > 0, so it is the unique global minimum (L is convex). Connection: if x_i ~ N(b, sigma^2) i.i.d., the negative log likelihood is (1/(2 sigma^2)) sum_i (x_i - b)^2 + const, so minimising squared error is exactly maximum likelihood under additive Gaussian noise — and the MLE of the mean is the sample mean."
+  },
+  {
+   "task": "D2L Ch 3–5",
+   "question": "D2L question 2 of 5 (§3.1 exercise: derive the analytic/closed-form solution of linear regression, and say when it breaks down)",
+   "verdict": "missing",
+   "feedback": "No answer submitted. Know both the closed form and why practitioners still use SGD instead of it.",
+   "ground_truth": "Minimise ||y - Xw||^2 over w (bias absorbed as a column of ones in X). Gradient: -2 X^T (y - Xw) = 0 gives the normal equations X^T X w = X^T y, so w* = (X^T X)^{-1} X^T y. It fails when X^T X is singular — i.e. when the columns of X are linearly dependent (collinear features) or when d > n — in which case the solution is not unique; use the pseudoinverse or add ridge regularisation, w* = (X^T X + lambda I)^{-1} X^T y. Even when it works, forming and inverting X^T X costs O(n d^2 + d^3), which is why minibatch SGD is preferred for large d."
+  },
+  {
+   "task": "D2L Ch 3–5",
+   "question": "D2L question 3 of 5 (§4.1 exercise: show softmax is invariant to adding a constant to all logits, and derive the cross-entropy gradient w.r.t. the logits)",
+   "verdict": "missing",
+   "feedback": "No answer submitted. The shift-invariance property is both a classic exercise and the reason real softmax implementations subtract the max logit.",
+   "ground_truth": "Invariance: softmax(o + c*1)_j = exp(o_j + c)/sum_k exp(o_k + c) = e^c exp(o_j) / (e^c sum_k exp(o_k)) = softmax(o)_j. Practical use: subtract max_k o_k before exponentiating to avoid overflow. Gradient: with y_hat = softmax(o) and one-hot label y, the loss is l = -sum_j y_j log y_hat_j, and dl/do_j = y_hat_j - y_j, i.e. grad_o l = softmax(o) - y. This strikingly simple form is why softmax is paired with cross-entropy rather than with squared error."
+  },
+  {
+   "task": "D2L Ch 3–5",
+   "question": "D2L question 4 of 5 (§5.1 exercise: show that stacking layers without a nonlinearity cannot increase expressive power)",
+   "verdict": "missing",
+   "feedback": "No answer submitted. This ties directly to the gap in your written answer on neural-network layers, where the necessity of the nonlinearity was not stated.",
+   "ground_truth": "Let h = W1 x + b1 and o = W2 h + b2. Substituting, o = W2(W1 x + b1) + b2 = (W2 W1) x + (W2 b1 + b2) = W x + b, a single affine transformation. By induction any depth-L stack of affine layers collapses to one affine layer, so the function class is unchanged no matter how many layers are added (and rank(W2 W1) <= min of the ranks, so it can even be smaller). Inserting a nonlinear sigma between layers, h = sigma(W1 x + b1), blocks the collapse; with ReLU the network realises continuous piecewise-linear functions and, by the universal approximation theorem, one sufficiently wide hidden layer can approximate any continuous function on a compact set."
+  },
+  {
+   "task": "D2L Ch 3–5",
+   "question": "D2L question 5 of 5 (§5.1 exercise: give the derivative of ReLU/pReLU and show the relation tanh(x) + 1 = 2*sigmoid(2x))",
+   "verdict": "missing",
+   "feedback": "No answer submitted. You did define ReLU correctly in the concepts section; the follow-up is knowing its derivative and the non-differentiable point at 0.",
+   "ground_truth": "ReLU(x) = max(0,x) has derivative 1 for x > 0 and 0 for x < 0; it is not differentiable at x = 0, where frameworks adopt the subgradient 0 (PyTorch) by convention. pReLU(x) = max(0,x) + alpha*min(0,x) has derivative 1 for x > 0 and alpha for x < 0, which avoids the dead-unit problem of ReLU. Identity: 2*sigmoid(2x) = 2/(1 + e^{-2x}); tanh(x) + 1 = (e^x - e^{-x})/(e^x + e^{-x}) + 1 = 2e^x/(e^x + e^{-x}) = 2/(1 + e^{-2x}) after dividing through by e^x. So tanh(x) = 2*sigmoid(2x) - 1 — tanh is a rescaled, recentred sigmoid, which is why tanh is zero-centred and sigmoid is not."
+  }
+ ],
+ "errors": [
+  {
+   "topic": "Gradient descent",
+   "question": "Explain gradient descent (Day 1 ML concepts)",
+   "why": "Concept",
+   "wrong_reasoning": "Wrote: 'Gradient descent minimizing the negative log likelihood of the derivative of the loss function wrt the weights. Gradient descent assumes that by minimizing the negative log likelihood, the loss derivative will reach the local minima.' This treats NLL as intrinsic to GD, applies 'minimize' to the derivative rather than to the loss, and omits the update rule and learning rate entirely.",
+   "correct_rule": "GD minimises the LOSS, not its derivative: w <- w - eta * grad_w L(w). The gradient is the direction of steepest ascent, so you step against it. Any differentiable loss works — NLL is just one choice. At a minimum the GRADIENT goes to zero, not the loss."
+  },
+  {
+   "topic": "Neural-network layers (bias term)",
+   "question": "Explain neural-network layers (Day 1 ML concepts)",
+   "why": "Concept",
+   "wrong_reasoning": "Wrote: 'b is bias to reduce overfitting the weights.' Also wrote the layer in scalar form f(x) = wx + b rather than as a vector-to-vector map.",
+   "correct_rule": "Bias = intercept/offset: it lets the affine map h = Wx + b shift off the origin, adding expressive power. It has NOTHING to do with overfitting — that is regularisation's job, and bias is normally EXCLUDED from weight decay. A layer maps vector to vector, so W is a matrix."
+  },
+  {
+   "topic": "Train/validation/test",
+   "question": "Explain train/validation/test splits (Day 1 ML concepts)",
+   "why": "Concept",
+   "wrong_reasoning": "Wrote: 'Validation are the set of data used for validating the training. Every epoch of training, the validation data is used to validate training.' and 'Test data is used for evaluating the model, to evaluate the features that have been learned.' Monitoring is described, but the actual purpose of validation and the one-use rule for test are never stated.",
+   "correct_rule": "Train fits PARAMETERS, validation chooses HYPERPARAMETERS (model selection, early stopping), test is touched ONCE at the end for an unbiased generalisation estimate. Any decision made using a split contaminates it — that is why test must inform zero decisions."
+  },
+  {
+   "topic": "Loss vs metric",
+   "question": "Explain loss vs metric (Day 1 ML concepts)",
+   "why": "Concept",
+   "wrong_reasoning": "Wrote: 'Loss measures how far the predicted output is from the actual output from ground truth data. Metric is the tool to measure the performance of a model given some test data.' The separation is framed as train-data vs test-data, which is not the real distinction.",
+   "correct_rule": "Loss = the differentiable objective you OPTIMISE (often a surrogate); metric = what you actually CARE about and report, and it need not be differentiable (accuracy, F1, AUC). Cross-entropy is the differentiable stand-in for 0-1 accuracy, whose gradient is zero almost everywhere."
+  },
+  {
+   "topic": "PCA",
+   "question": "Explain PCA (Day 1 ML concepts)",
+   "why": "Concept",
+   "wrong_reasoning": "Wrote only: 'PCA is a dimensionality reduction method to find new sets of features from high dimensions to lower dimensions.' States the goal with no mechanism — no variance criterion, no eigenvectors, no covariance matrix, no centring.",
+   "correct_rule": "PCA = centre the data, then project onto the top-k eigenvectors of the covariance matrix (equivalently the top right singular vectors). Those directions maximise projected variance, which is equivalent to minimising squared reconstruction error. Retained variance = sum of top-k eigenvalues / sum of all eigenvalues."
+  },
+  {
+   "topic": "Clustering",
+   "question": "Explain clustering (Day 1 ML concepts)",
+   "why": "Concept",
+   "wrong_reasoning": "Wrote: 'Clustering is a non-supervised method to train model by grouping similar features together and push dissimilar features apart.' Clusters data by 'features' rather than by examples, and imports the attract/repel framing of contrastive learning, which clustering does not use.",
+   "correct_rule": "Clustering partitions EXAMPLES (not features) into groups using only x, no labels. k-means minimises the within-cluster sum of squares by alternating assign-to-nearest-centroid and recompute-centroid-as-mean. There is no repulsion term — that is contrastive learning."
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "pulled_at": "2026-10-25T11:12:00+07:00",
+ "pdf": "MML-BOOK.pdf",
+ "files": [
+  "MML-BOOK.pdf",
+  "src/2_linalg.tex",
+  "src/main.tex",
+  "src/review_d2l.tex"
+ ]
+}

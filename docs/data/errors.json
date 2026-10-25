@@ -1,0 +1,128 @@
+[
+ {
+  "id": "20261025111609-1-0",
+  "date": "2026-10-25",
+  "day": 1,
+  "topic": "Gradient descent",
+  "question": "Explain gradient descent (Day 1 ML concepts)",
+  "why": "Concept",
+  "wrong_reasoning": "Wrote: 'Gradient descent minimizing the negative log likelihood of the derivative of the loss function wrt the weights. Gradient descent assumes that by minimizing the negative log likelihood, the loss derivative will reach the local minima.' This treats NLL as intrinsic to GD, applies 'minimize' to the derivative rather than to the loss, and omits the update rule and learning rate entirely.",
+  "correct_rule": "GD minimises the LOSS, not its derivative: w <- w - eta * grad_w L(w). The gradient is the direction of steepest ascent, so you step against it. Any differentiable loss works — NLL is just one choice. At a minimum the GRADIENT goes to zero, not the loss.",
+  "retry": [
+   "2026-10-26",
+   "2026-10-28",
+   "2026-11-09"
+  ],
+  "retry_done": [
+   false,
+   false,
+   false
+  ],
+  "source": "claude"
+ },
+ {
+  "id": "20261025111609-1-1",
+  "date": "2026-10-25",
+  "day": 1,
+  "topic": "Neural-network layers (bias term)",
+  "question": "Explain neural-network layers (Day 1 ML concepts)",
+  "why": "Concept",
+  "wrong_reasoning": "Wrote: 'b is bias to reduce overfitting the weights.' Also wrote the layer in scalar form f(x) = wx + b rather than as a vector-to-vector map.",
+  "correct_rule": "Bias = intercept/offset: it lets the affine map h = Wx + b shift off the origin, adding expressive power. It has NOTHING to do with overfitting — that is regularisation's job, and bias is normally EXCLUDED from weight decay. A layer maps vector to vector, so W is a matrix.",
+  "retry": [
+   "2026-10-26",
+   "2026-10-28",
+   "2026-11-09"
+  ],
+  "retry_done": [
+   false,
+   false,
+   false
+  ],
+  "source": "claude"
+ },
+ {
+  "id": "20261025111609-1-2",
+  "date": "2026-10-25",
+  "day": 1,
+  "topic": "Train/validation/test",
+  "question": "Explain train/validation/test splits (Day 1 ML concepts)",
+  "why": "Concept",
+  "wrong_reasoning": "Wrote: 'Validation are the set of data used for validating the training. Every epoch of training, the validation data is used to validate training.' and 'Test data is used for evaluating the model, to evaluate the features that have been learned.' Monitoring is described, but the actual purpose of validation and the one-use rule for test are never stated.",
+  "correct_rule": "Train fits PARAMETERS, validation chooses HYPERPARAMETERS (model selection, early stopping), test is touched ONCE at the end for an unbiased generalisation estimate. Any decision made using a split contaminates it — that is why test must inform zero decisions.",
+  "retry": [
+   "2026-10-26",
+   "2026-10-28",
+   "2026-11-09"
+  ],
+  "retry_done": [
+   false,
+   false,
+   false
+  ],
+  "source": "claude"
+ },
+ {
+  "id": "20261025111609-1-3",
+  "date": "2026-10-25",
+  "day": 1,
+  "topic": "Loss vs metric",
+  "question": "Explain loss vs metric (Day 1 ML concepts)",
+  "why": "Concept",
+  "wrong_reasoning": "Wrote: 'Loss measures how far the predicted output is from the actual output from ground truth data. Metric is the tool to measure the performance of a model given some test data.' The separation is framed as train-data vs test-data, which is not the real distinction.",
+  "correct_rule": "Loss = the differentiable objective you OPTIMISE (often a surrogate); metric = what you actually CARE about and report, and it need not be differentiable (accuracy, F1, AUC). Cross-entropy is the differentiable stand-in for 0-1 accuracy, whose gradient is zero almost everywhere.",
+  "retry": [
+   "2026-10-26",
+   "2026-10-28",
+   "2026-11-09"
+  ],
+  "retry_done": [
+   false,
+   false,
+   false
+  ],
+  "source": "claude"
+ },
+ {
+  "id": "20261025111609-1-4",
+  "date": "2026-10-25",
+  "day": 1,
+  "topic": "PCA",
+  "question": "Explain PCA (Day 1 ML concepts)",
+  "why": "Concept",
+  "wrong_reasoning": "Wrote only: 'PCA is a dimensionality reduction method to find new sets of features from high dimensions to lower dimensions.' States the goal with no mechanism — no variance criterion, no eigenvectors, no covariance matrix, no centring.",
+  "correct_rule": "PCA = centre the data, then project onto the top-k eigenvectors of the covariance matrix (equivalently the top right singular vectors). Those directions maximise projected variance, which is equivalent to minimising squared reconstruction error. Retained variance = sum of top-k eigenvalues / sum of all eigenvalues.",
+  "retry": [
+   "2026-10-26",
+   "2026-10-28",
+   "2026-11-09"
+  ],
+  "retry_done": [
+   false,
+   false,
+   false
+  ],
+  "source": "claude"
+ },
+ {
+  "id": "20261025111609-1-5",
+  "date": "2026-10-25",
+  "day": 1,
+  "topic": "Clustering",
+  "question": "Explain clustering (Day 1 ML concepts)",
+  "why": "Concept",
+  "wrong_reasoning": "Wrote: 'Clustering is a non-supervised method to train model by grouping similar features together and push dissimilar features apart.' Clusters data by 'features' rather than by examples, and imports the attract/repel framing of contrastive learning, which clustering does not use.",
+  "correct_rule": "Clustering partitions EXAMPLES (not features) into groups using only x, no labels. k-means minimises the within-cluster sum of squares by alternating assign-to-nearest-centroid and recompute-centroid-as-mean. There is no repulsion term — that is contrastive learning.",
+  "retry": [
+   "2026-10-26",
+   "2026-10-28",
+   "2026-11-09"
+  ],
+  "retry_done": [
+   false,
+   false,
+   false
+  ],
+  "source": "claude"
+ }
+]

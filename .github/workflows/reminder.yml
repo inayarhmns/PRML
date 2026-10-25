@@ -1,0 +1,22 @@
+name: Daily study reminder
+
+on:
+  schedule:
+    - cron: "0 10 * * 1-5"   # 17:00 WIB, Monday–Friday
+    - cron: "0 23 * * 5,6"   # 06:00 WIB, Saturday & Sunday (23:00 UTC the evening before)
+  workflow_dispatch: {}
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Send reminder
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          REMINDER_TO: inaya.rahmanisa@gmail.com
+        run: python scripts/send_reminder.py
